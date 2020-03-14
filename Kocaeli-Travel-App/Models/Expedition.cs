@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kocaeli_Travel_App
 {
-    class Expedition
+    public class Expedition
     {
         public string Id { get; set; }
         public string Road { get; set; }
