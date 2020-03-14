@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="List\MyList.cs" />
-    <Compile Include="List\Node.cs" />
-    <Compile Include="Models\Armchair.cs" />
-    <Compile Include="Models\Expedition.cs" />
+    <Compile Include="ModelsFile\Armchair.cs" />
+    <Compile Include="ModelsFile\Expedition.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListFile\MyList.cs" />
+    <Compile Include="ListFile\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

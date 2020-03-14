@@ -17,8 +17,8 @@ namespace Kocaeli_Travel_App
         public string LicencePlate { get; set; }
         public string Captain { get; set; }
 
+        public MyList<Armchair> Armchairs = new MyList<Armchair>();
 
 
-        //List Koltuklar
     }
 }
