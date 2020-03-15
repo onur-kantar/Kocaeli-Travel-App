@@ -9,7 +9,7 @@ namespace Kocaeli_Travel_App
     public class MyList<T>
     {
         public Node<T> _head;
-        public void Add(T d)
+        public void myAdd(T d)
         {
 
             Node<T> newNode = new Node<T>(d);

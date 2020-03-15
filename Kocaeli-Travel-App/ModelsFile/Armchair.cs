@@ -13,5 +13,14 @@ namespace Kocaeli_Travel_App
         public string Name { get; set; }
         public string Gender { get; set; }
         public string State { get; set; }
+
+        public Armchair(string id, string price, string name, string gender, string state)
+        {
+            Id = id;
+            Price = price;
+            Name = name;
+            Gender = gender;
+            State = state;
+        }
     }
 }
