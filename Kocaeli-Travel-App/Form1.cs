@@ -13,6 +13,8 @@ namespace Kocaeli_Travel_App
 {
     public partial class Form1 : Form
     {
+        MyList<Expedition> myList = new MyList<Expedition>();
+
         public Form1()
         {
             InitializeComponent();
@@ -51,7 +53,6 @@ namespace Kocaeli_Travel_App
 
             bool test = true;
 
-            MyList<Expedition> myList = new MyList<Expedition>();
             Expedition expedition = new Expedition();
 
             foreach (string readLine in readText)
@@ -103,6 +104,40 @@ namespace Kocaeli_Travel_App
                     armchairData.Add(readLine);
                 }
             }
+
+
+            myList.PrintList(listBox1);
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myList.PrintList(listBox2);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Todo Ekle
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Todo sil
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Todo kaptan değiştir
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Todo gelir hesapla
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Todo Sefer seç
         }
     }
 }

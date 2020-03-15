@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Kocaeli_Travel_App
 {
@@ -30,20 +31,21 @@ namespace Kocaeli_Travel_App
 
             //ShowNodes();
         }
-        public void PrintList()
+        public void PrintList(ListBox listBox)
         {
             Node<T> current = _head;
 
             if (current == null)
             {
-                Console.WriteLine("No nodes to display.");
-                Console.WriteLine();
+                MessageBox.Show("Sefer Yok");
+                return;
             }
             else
             {
+                listBox.Items.Clear();
                 while (current != null)
                 {
-                    Console.Write("|" + current.Data + "|=>");
+                    listBox.Items.Add(current.Data);
                     current = current.Next;
                 }
                 Console.WriteLine();
