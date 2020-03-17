@@ -31,7 +31,7 @@ namespace Kocaeli_Travel_App
 
             //ShowNodes();
         }
-        public void PrintList(ListBox listBox)
+        public void printList(ListBox listBox)
         {
             Node<T> current = _head;
 

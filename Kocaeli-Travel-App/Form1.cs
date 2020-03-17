@@ -13,7 +13,7 @@ namespace Kocaeli_Travel_App
 {
     public partial class Form1 : Form
     {
-        MyList<Expedition> myList = new MyList<Expedition>();
+        MyList<Expedition> myList;
 
         public Form1()
         {
@@ -43,9 +43,15 @@ namespace Kocaeli_Travel_App
 
 
             string date = DateTime.Now.ToString("dd/MM/yyyy");
-            string path = @"C:\Users\onurk\Desktop\"+ date+".txt";
+            string path = @"C:\Users\onurk\Desktop\"+date+".txt";
 
             //TODO eğer masaüstünde yoksa dosya
+
+            printToMyList(path);
+        }
+        public void printToMyList(string path)
+        {
+            myList = new MyList<Expedition>();
             string[] readText = File.ReadAllLines(path, Encoding.UTF8);
 
             List<string> expeditionData = new List<string>();
@@ -77,7 +83,7 @@ namespace Kocaeli_Travel_App
                     {
                         foreach (var item in armchairData)
                         {
-                            string [] armchairArray = item.Split(' ');
+                            string[] armchairArray = item.Split(' ');
                             expedition.Armchairs.myAdd(
                                 new Armchair(
                                     armchairArray[0],
@@ -86,7 +92,7 @@ namespace Kocaeli_Travel_App
                                     armchairArray[3],
                                     armchairArray[4]
                                     )
-                                ); 
+                                );
                         }
                         armchairData.Clear();
                         myList.myAdd(expedition);
@@ -104,15 +110,12 @@ namespace Kocaeli_Travel_App
                     armchairData.Add(readLine);
                 }
             }
-
-
-            myList.PrintList(listBox1);
+            myList.printList(listBox1);
 
         }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            myList.PrintList(listBox2);
+            myList.printList(listBox2);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -137,7 +140,16 @@ namespace Kocaeli_Travel_App
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //Todo Sefer seç
+            openFileDialog1.Filter = "Text Dosyası |*.txt";
+            openFileDialog1.Title = "Sefer Seç";
+            openFileDialog1.ShowDialog();
+            string path = openFileDialog1.FileName;
+            printToMyList(path);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Todo Bilet Satın Al
         }
     }
 }
