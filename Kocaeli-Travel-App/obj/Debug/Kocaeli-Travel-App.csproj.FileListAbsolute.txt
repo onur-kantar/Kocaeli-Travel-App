@@ -7,3 +7,9 @@ C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.exe
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.pdb
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.Form1.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.csprojAssemblyReference.cache
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.Form1.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.Properties.Resources.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.csproj.GenerateResource.cache
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.exe
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.pdb

@@ -9,10 +9,12 @@ namespace Kocaeli_Travel_App
 {
     public class MyList<T>
     {
+     
         public Node<T> _head;
+        public T Data;
         public void myAdd(T d)
         {
-
+            
             Node<T> newNode = new Node<T>(d);
             Node<T> current = _head;
 
@@ -48,9 +50,28 @@ namespace Kocaeli_Travel_App
                 {
                     listBox.Items.Add(current.Data);
                     current = current.Next;
+                    
                 }
                 Console.WriteLine();
             }
+        }
+        
+  
+        public MyList<T> Find(T node)
+        {
+            return Find(node, _head);
+        }
+        public MyList<T> Find(T node, MyList<T> start)
+        {
+            MyList<T> iterator = start;
+            while(iterator!=null)
+            {
+                if (iterator.Data.Equals(node)) return iterator;
+                iterator = iterator.Next;
+                
+                
+            }
+            return null;
         }
     }
 }
