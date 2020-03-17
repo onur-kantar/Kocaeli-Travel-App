@@ -121,6 +121,8 @@ namespace Kocaeli_Travel_App
         private void button1_Click(object sender, EventArgs e)
         {
             //Todo Ekle
+            AddExpedition addExpedition = new AddExpedition();
+            addExpedition.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddExpedition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExpedition.Designer.cs">
+      <DependentUpon>AddExpedition.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelsFile\Armchair.cs" />
     <Compile Include="ModelsFile\Expedition.cs" />
     <Compile Include="Form1.cs">
@@ -58,6 +64,9 @@
     <Compile Include="ListFile\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddExpedition.resx">
+      <DependentUpon>AddExpedition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
