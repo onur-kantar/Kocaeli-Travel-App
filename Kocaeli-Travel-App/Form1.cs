@@ -14,7 +14,7 @@ namespace Kocaeli_Travel_App
     public partial class Form1 : Form
     {
         MyList<Expedition> myList;
-
+        string path;
         public Form1()
         {
             InitializeComponent();
@@ -43,15 +43,19 @@ namespace Kocaeli_Travel_App
 
 
             string date = DateTime.Now.ToString("dd/MM/yyyy");
-            string path = @"C:\Users\onurk\Desktop\"+date+".txt";
+            path = @"C:\Users\onurk\Desktop\" + date + ".txt";
+
 
             //TODO eğer masaüstünde yoksa dosya
 
             printToMyList(path);
+            printToListBox1();
+
         }
         public void printToMyList(string path)
         {
             myList = new MyList<Expedition>();
+
             string[] readText = File.ReadAllLines(path, Encoding.UTF8);
 
             List<string> expeditionData = new List<string>();
@@ -110,19 +114,86 @@ namespace Kocaeli_Travel_App
                     armchairData.Add(readLine);
                 }
             }
-            myList.printList(listBox1);
 
+            //Todo list'i yollama burada doldur
+        }
+        public void printToListBox1()
+        {
+            Node<Expedition> current = myList._head;
+
+            if (current == null)
+            {
+                MessageBox.Show("Sefer Yok");
+                return;
+            }
+            else
+            {
+                listBox1.Items.Clear();
+                while (current != null)
+                {
+                    listBox1.Items.Add(current.Data.Id);
+                    current = current.Next;
+                }
+                Console.WriteLine();
+            }
+        }
+        public void printToListBox2()
+        {
+            string id = listBox1.SelectedItem.ToString();
+
+            Node<Expedition> current = myList._head;
+
+            while (current.Data.Id != id)
+            {
+                current = current.Next;
+            }
+
+            listBox2.Items.Clear();
+            Node<Armchair> armChairCurrent = current.Data.Armchairs._head;
+
+            while (armChairCurrent != null)
+            {
+                //Burada kaldın onur
+                listBox1.Items.(armChairCurrent.Data);
+                armChairCurrent = armChairCurrent.Next;
+            }
+            Console.WriteLine();
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            myList.printList(listBox2);
+            printToListBox2();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Todo Ekle
+            //Todo Ekle, id yi kendisi versin
             AddExpedition addExpedition = new AddExpedition();
             addExpedition.ShowDialog();
+            myList.myAdd(addExpedition.expedition);
+
+            List<string> addNew = new List<string>();
+            addNew.Add(addExpedition.expedition.Id);
+            addNew.Add(addExpedition.expedition.Road);
+            addNew.Add(addExpedition.expedition.Date);
+            addNew.Add(addExpedition.expedition.Time);
+            addNew.Add(addExpedition.expedition.Capacity);
+            addNew.Add(addExpedition.expedition.Price);
+            addNew.Add(addExpedition.expedition.LicencePlate);
+            addNew.Add(addExpedition.expedition.Captain);
+            addNew.Add("");
+
+            Node<Armchair> current = addExpedition.expedition.Armchairs._head;
+            string textArmchair;
+            while (current != null)
+            {
+                textArmchair = current.Data.Id + " " + current.Data.Price + " " + current.Data.Name + " " + current.Data.Gender + " " + current.Data.State;
+                addNew.Add(textArmchair);
+                current = current.Next;
+            }
+            addNew.Add("");
+
+            File.AppendAllLines(path, addNew);
+            printToListBox1();
         }
 
         private void button2_Click(object sender, EventArgs e)

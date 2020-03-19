@@ -28,7 +28,7 @@ namespace Kocaeli_Travel_App
             Capacity = capacity;
             Price = price;
             LicencePlate = licencePlate;
-            Captain = capacity;
+            Captain = captain;
         }
         public Expedition()
         {

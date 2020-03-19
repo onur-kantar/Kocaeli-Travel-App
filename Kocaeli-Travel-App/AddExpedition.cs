@@ -12,6 +12,7 @@ namespace Kocaeli_Travel_App
 {
     public partial class AddExpedition : Form
     {
+        public Expedition expedition;
         public AddExpedition()
         {
             InitializeComponent();
@@ -20,6 +21,25 @@ namespace Kocaeli_Travel_App
         private void button1_Click(object sender, EventArgs e)
         {
             //Todo Sefer ekle
+
+            expedition = new Expedition(
+                id.Text,
+                road.Text,
+                date.Text,
+                time.Text,
+                capacity.Text,
+                price.Text,
+                licancePlate.Text,
+                captain.Text
+                );
+
+            for (int i = 0; i < int.Parse(capacity.Text); i++)
+            {
+                expedition.Armchairs.myAdd(new Armchair((i+1).ToString(), price.Text, "", "", "Boş"));
+            }
+
+            this.Close();
+
         }
     }
 }
