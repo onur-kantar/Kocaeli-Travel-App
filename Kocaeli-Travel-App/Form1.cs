@@ -22,6 +22,7 @@ namespace Kocaeli_Travel_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             //MyList<Expedition> myList = new MyList<Expedition>();
             //Expedition expedition = new Expedition("1","Kocaeli-İstanbul","13.02.2020","15.00","15","100TL","34ki34","20");
             //expedition.Armchairs.Add(new Armchair("1","100TL","Onur","Erkek","Dolu"));
@@ -48,9 +49,23 @@ namespace Kocaeli_Travel_App
 
             //TODO eğer masaüstünde yoksa dosya
 
-            printToMyList(path);
-            printToListBox1();
+            expeditionListView.Columns.Add("Id");
+            expeditionListView.Columns.Add("Road");
+            expeditionListView.Columns.Add("Date");
+            expeditionListView.Columns.Add("Time");
+            expeditionListView.Columns.Add("Capacity");
+            expeditionListView.Columns.Add("Price");
+            expeditionListView.Columns.Add("LicencePlate");
+            expeditionListView.Columns.Add("Captain");
 
+            armchairListView.Columns.Add("Id");
+            armchairListView.Columns.Add("Name");
+            armchairListView.Columns.Add("Gender");
+            armchairListView.Columns.Add("State");
+            armchairListView.Columns.Add("Price");
+
+            printToMyList(path);
+            printToExpeditionListView();
         }
         public void printToMyList(string path)
         {
@@ -115,10 +130,11 @@ namespace Kocaeli_Travel_App
                 }
             }
 
-            //Todo list'i yollama burada doldur
+            //Todo list'i yollama burada doldur printtolistbox
         }
-        public void printToListBox1()
+        public void printToExpeditionListView()
         {
+            ListViewItem listViewItem;
             Node<Expedition> current = myList._head;
 
             if (current == null)
@@ -128,42 +144,55 @@ namespace Kocaeli_Travel_App
             }
             else
             {
-                listBox1.Items.Clear();
+                expeditionListView.Items.Clear();
                 while (current != null)
                 {
-                    listBox1.Items.Add(current.Data.Id);
+                    string[] expeditionData =
+                    {
+                        current.Data.Id,
+                        current.Data.Road,
+                        current.Data.Date,
+                        current.Data.Time,
+                        current.Data.Capacity,
+                        current.Data.Price,
+                        current.Data.LicencePlate,
+                        current.Data.Captain
+                    };
+                    listViewItem = new ListViewItem(expeditionData);
+                    expeditionListView.Items.Add(listViewItem);
                     current = current.Next;
                 }
-                Console.WriteLine();
             }
         }
-        public void printToListBox2()
+        public void printToArmchairListView(string id)
         {
-            string id = listBox1.SelectedItem.ToString();
-
+            ListViewItem listViewItem;
             Node<Expedition> current = myList._head;
+            armchairListView.Items.Clear();
 
             while (current.Data.Id != id)
             {
                 current = current.Next;
             }
 
-            listBox2.Items.Clear();
             Node<Armchair> armChairCurrent = current.Data.Armchairs._head;
 
             while (armChairCurrent != null)
             {
-                //Burada kaldın onur
-                listBox1.Items.(armChairCurrent.Data);
+                string[] armchairData =
+                    {
+                        armChairCurrent.Data.Id,
+                        armChairCurrent.Data.Price,
+                        armChairCurrent.Data.Name,
+                        armChairCurrent.Data.Gender,
+                        armChairCurrent.Data.State
+
+                    };
+                listViewItem = new ListViewItem(armchairData);
+                armchairListView.Items.Add(listViewItem);
                 armChairCurrent = armChairCurrent.Next;
             }
-            Console.WriteLine();
         }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            printToListBox2();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             //Todo Ekle, id yi kendisi versin
@@ -193,9 +222,8 @@ namespace Kocaeli_Travel_App
             addNew.Add("");
 
             File.AppendAllLines(path, addNew);
-            printToListBox1();
+            printToExpeditionListView();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             //Todo sil
@@ -223,6 +251,10 @@ namespace Kocaeli_Travel_App
         private void button6_Click(object sender, EventArgs e)
         {
             //Todo Bilet Satın Al
+        }
+        private void expeditionListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            printToArmchairListView(e.Item.Text);
         }
     }
 }
