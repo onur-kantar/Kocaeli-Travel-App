@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.armchairListView = new System.Windows.Forms.ListView();
             this.expeditionListView = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,12 +41,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
             this.button6 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ExpeditionCounter = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -64,6 +67,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ExpeditionCounter);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.armchairListView);
             this.tabPage1.Controls.Add(this.expeditionListView);
             this.tabPage1.Controls.Add(this.label1);
@@ -80,6 +85,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sefer İşlemleri";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(624, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Tüm Sefer Sayısı :";
             // 
             // armchairListView
             // 
@@ -130,7 +144,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 50);
             this.button5.TabIndex = 9;
-            this.button5.Text = "Sefer Seç";
+            this.button5.Text = " Gün Seç";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -176,18 +190,52 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.listView1);
+            this.tabPage2.Controls.Add(this.listView2);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.listBox3);
-            this.tabPage2.Controls.Add(this.listBox4);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1329, 455);
+            this.tabPage2.Size = new System.Drawing.Size(815, 436);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Bilet Satış";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(89, 6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 50);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Satış İptal";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(6, 270);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(803, 158);
+            this.listView1.TabIndex = 18;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // listView2
+            // 
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(8, 89);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(803, 158);
+            this.listView2.TabIndex = 17;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // label3
             // 
@@ -195,35 +243,17 @@
             this.label3.Location = new System.Drawing.Point(5, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 17);
-            this.label3.TabIndex = 12;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Seferler";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(261, 69);
+            this.label4.Location = new System.Drawing.Point(6, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 17);
-            this.label4.TabIndex = 13;
+            this.label4.TabIndex = 16;
             this.label4.Text = "Koltuklar";
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(8, 88);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(250, 292);
-            this.listBox3.TabIndex = 16;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(264, 88);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(250, 292);
-            this.listBox4.TabIndex = 15;
             // 
             // button6
             // 
@@ -238,6 +268,15 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // ExpeditionCounter
+            // 
+            this.ExpeditionCounter.AutoSize = true;
+            this.ExpeditionCounter.Location = new System.Drawing.Point(753, 69);
+            this.ExpeditionCounter.Name = "ExpeditionCounter";
+            this.ExpeditionCounter.Size = new System.Drawing.Size(16, 17);
+            this.ExpeditionCounter.TabIndex = 15;
+            this.ExpeditionCounter.Text = "0";
             // 
             // Form1
             // 
@@ -261,7 +300,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
@@ -269,14 +307,18 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ListView expeditionListView;
         private System.Windows.Forms.ListView armchairListView;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label ExpeditionCounter;
     }
 }
 

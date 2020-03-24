@@ -35,9 +35,10 @@ namespace Kocaeli_Travel_App
 
             for (int i = 0; i < int.Parse(capacity.Text); i++)
             {
-                expedition.Armchairs.myAdd(new Armchair((i+1).ToString(), price.Text, "", "", "Boş"));
+                expedition.Armchairs.myAdd(new Armchair((i+1).ToString(), "", "", "Boş", price.Text));
             }
 
+            this.DialogResult = DialogResult.OK;
             this.Close();
 
         }

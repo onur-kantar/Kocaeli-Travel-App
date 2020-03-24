@@ -14,7 +14,7 @@ namespace Kocaeli_Travel_App
         {
 
             Node<T> newNode = new Node<T>(d);
-            Node<T> current = _head;
+            Node<T> current = _head; 
 
             if (_head == null)
             {
@@ -27,6 +27,8 @@ namespace Kocaeli_Travel_App
                     current = current.Next;
                 }
                 current.Next = newNode;
+                //TODO neden current'teki değişiklik _head'ı etkiliyor traverse işlemi
+
             }
 
             //ShowNodes();
