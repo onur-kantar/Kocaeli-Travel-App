@@ -9,3 +9,4 @@ C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.Form1.resources
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.AddExpedition.resources
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.CaptainChange.resources
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.BuyTicket.resources

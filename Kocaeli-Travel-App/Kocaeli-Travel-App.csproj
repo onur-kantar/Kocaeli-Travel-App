@@ -52,6 +52,12 @@
     <Compile Include="AddExpedition.Designer.cs">
       <DependentUpon>AddExpedition.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyTicket.Designer.cs">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaptainChange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddExpedition.resx">
       <DependentUpon>AddExpedition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyTicket.resx">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CaptainChange.resx">
       <DependentUpon>CaptainChange.cs</DependentUpon>

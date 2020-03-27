@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.armchairListView = new System.Windows.Forms.ListView();
             this.expeditionListView = new System.Windows.Forms.ListView();
@@ -39,57 +37,17 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.asdasd = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ExpeditionCounter = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(823, 465);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.ExpeditionCounter);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.armchairListView);
-            this.tabPage1.Controls.Add(this.expeditionListView);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(815, 436);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Sefer İşlemleri";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(624, 69);
+            this.label5.Location = new System.Drawing.Point(628, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 14;
@@ -100,7 +58,7 @@
             this.armchairListView.FullRowSelect = true;
             this.armchairListView.GridLines = true;
             this.armchairListView.HideSelection = false;
-            this.armchairListView.Location = new System.Drawing.Point(6, 270);
+            this.armchairListView.Location = new System.Drawing.Point(10, 276);
             this.armchairListView.Name = "armchairListView";
             this.armchairListView.Size = new System.Drawing.Size(803, 158);
             this.armchairListView.TabIndex = 13;
@@ -112,7 +70,7 @@
             this.expeditionListView.FullRowSelect = true;
             this.expeditionListView.GridLines = true;
             this.expeditionListView.HideSelection = false;
-            this.expeditionListView.Location = new System.Drawing.Point(8, 89);
+            this.expeditionListView.Location = new System.Drawing.Point(12, 95);
             this.expeditionListView.Name = "expeditionListView";
             this.expeditionListView.Size = new System.Drawing.Size(803, 158);
             this.expeditionListView.TabIndex = 12;
@@ -123,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 69);
+            this.label1.Location = new System.Drawing.Point(9, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 1;
@@ -132,7 +90,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 250);
+            this.label2.Location = new System.Drawing.Point(10, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 2;
@@ -140,130 +98,73 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(332, 6);
+            this.button5.Location = new System.Drawing.Point(336, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 50);
             this.button5.TabIndex = 9;
             this.button5.Text = " Gün Seç";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.selectDate);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(251, 6);
+            this.button4.Location = new System.Drawing.Point(255, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 50);
             this.button4.TabIndex = 8;
             this.button4.Text = "Gelir Hesapla";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.calculateIncome);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(170, 6);
+            this.button3.Location = new System.Drawing.Point(174, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 50);
             this.button3.TabIndex = 7;
             this.button3.Text = "Kaptan Değiştir";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.captainChange);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(89, 6);
+            this.button2.Location = new System.Drawing.Point(93, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 50);
             this.button2.TabIndex = 6;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.delete);
             // 
-            // button1
+            // asdasd
             // 
-            this.button1.Location = new System.Drawing.Point(8, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 50);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.listView1);
-            this.tabPage2.Controls.Add(this.listView2);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(815, 436);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Bilet Satış";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.asdasd.Location = new System.Drawing.Point(12, 12);
+            this.asdasd.Name = "asdasd";
+            this.asdasd.Size = new System.Drawing.Size(75, 50);
+            this.asdasd.TabIndex = 5;
+            this.asdasd.Text = "Ekle";
+            this.asdasd.UseVisualStyleBackColor = true;
+            this.asdasd.Click += new System.EventHandler(this.add);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(89, 6);
+            this.button7.Location = new System.Drawing.Point(498, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 50);
             this.button7.TabIndex = 19;
             this.button7.Text = "Satış İptal";
             this.button7.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 270);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(803, 158);
-            this.listView1.TabIndex = 18;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // listView2
-            // 
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(8, 89);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(803, 158);
-            this.listView2.TabIndex = 17;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Seferler";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 250);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Koltuklar";
+            this.button7.Click += new System.EventHandler(this.ticketCancel);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(8, 6);
+            this.button6.Location = new System.Drawing.Point(417, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 50);
             this.button6.TabIndex = 14;
             this.button6.Text = "Satın Al";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.ticketBuy);
             // 
             // openFileDialog1
             // 
@@ -272,7 +173,7 @@
             // ExpeditionCounter
             // 
             this.ExpeditionCounter.AutoSize = true;
-            this.ExpeditionCounter.Location = new System.Drawing.Point(753, 69);
+            this.ExpeditionCounter.Location = new System.Drawing.Point(757, 75);
             this.ExpeditionCounter.Name = "ExpeditionCounter";
             this.ExpeditionCounter.Size = new System.Drawing.Size(16, 17);
             this.ExpeditionCounter.TabIndex = 15;
@@ -282,41 +183,41 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 465);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(824, 443);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.ExpeditionCounter);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.armchairListView);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.asdasd);
+            this.Controls.Add(this.expeditionListView);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button5);
             this.Name = "Form1";
             this.Text = "Kocaeli Travel";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button asdasd;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ListView expeditionListView;
         private System.Windows.Forms.ListView armchairListView;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label ExpeditionCounter;
     }
