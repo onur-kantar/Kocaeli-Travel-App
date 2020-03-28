@@ -30,28 +30,6 @@ namespace Kocaeli_Travel_App
                 //TODO neden current'teki değişiklik _head'ı etkiliyor traverse işlemi
 
             }
-
-            //ShowNodes();
-        }
-        public void printList(ListBox listBox)
-        {
-            Node<T> current = _head;
-
-            if (current == null)
-            {
-                MessageBox.Show("Sefer Yok");
-                return;
-            }
-            else
-            {
-                listBox.Items.Clear();
-                while (current != null)
-                {
-                    listBox.Items.Add(current.Data);
-                    current = current.Next;
-                }
-                Console.WriteLine();
-            }
         }
     }
 }

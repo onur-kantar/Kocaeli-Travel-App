@@ -22,11 +22,20 @@ namespace Kocaeli_Travel_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             string date = DateTime.Now.ToString("dd/MM/yyyy");
             path = @"C:\Users\onurk\Desktop\" + date + ".txt";
 
             //TODO eğer masaüstünde yoksa dosya
 
+            createListView();
+
+            printToMyList(path);
+            printToExpeditionCounter();
+        }
+
+        private void createListView()
+        {
             expeditionListView.Columns.Add("Id");
             expeditionListView.Columns.Add("Road");
             expeditionListView.Columns.Add("Date");
@@ -41,9 +50,6 @@ namespace Kocaeli_Travel_App
             armchairListView.Columns.Add("Gender");
             armchairListView.Columns.Add("State");
             armchairListView.Columns.Add("Price");
-
-            printToMyList(path);
-            printToExpeditionCounter();
         }
 
         public void printToExpeditionCounter()
@@ -60,6 +66,14 @@ namespace Kocaeli_Travel_App
         public void printToMyList(string path)
         {
             myList = new MyList<Expedition>();
+
+            if (!File.Exists(path))
+            {
+                using (File.CreateText(path))
+                {
+                    return;
+                }
+            }
 
             string[] readText = File.ReadAllLines(path, Encoding.UTF8);
 
@@ -166,11 +180,11 @@ namespace Kocaeli_Travel_App
         {
             ListViewItem listViewItem;
             Node<Expedition> current = myList._head;
+            expeditionListView.Items.Clear();
             armchairListView.Items.Clear();
 
             if (current == null)
             {
-                MessageBox.Show("Sefer Yok");
                 return;
             }
             else
@@ -286,39 +300,39 @@ namespace Kocaeli_Travel_App
             //Todo sil
             string id = expeditionListView.SelectedItems[0].Text;
             Node<Armchair> currentAr;
+
+            Node<Expedition> current = findExpedition(id);
+
+            currentAr = current.Data.Armchairs._head;
+            while (currentAr != null)
+            {
+                if (currentAr.Data.State != "Boş")
+                {
+                    MessageBox.Show("Sefer Satılmış Koltuk İçeriyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                currentAr = currentAr.Next;
+            }
+
             if (myList._head.Data.Id == id)
             {
-                currentAr = myList._head.Data.Armchairs._head;
-                while (currentAr != null)
-                {
-                    if (currentAr.Data.State != "Boş")
-                    {
-                        MessageBox.Show("Sefer Satılmış Koltuk İçeriyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    currentAr = currentAr.Next;
-                }
                 myList._head = myList._head.Next;
             }
             else
             {
-                Node<Expedition> current = findExpedition(id);
+                Node<Expedition> currentEx = myList._head;
 
-                currentAr = current.Data.Armchairs._head;
-                while (currentAr != null)
+                while (id != currentEx.Next.Data.Id)
                 {
-                    if (currentAr.Data.State != "Boş")
-                    {
-                        MessageBox.Show("Sefer Satılmış Koltuk İçeriyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    currentAr = currentAr.Next;
+                    currentEx = currentEx.Next;
                 }
-                current.Next = current.Next.Next;
+
+                currentEx.Next = currentEx.Next.Next;
+
             }
             printToTxtFile();
+            printToMyList(path);
             printToExpeditionListView();
-            return;
         }
         private void captainChange(object sender, EventArgs e)
         {
@@ -366,8 +380,9 @@ namespace Kocaeli_Travel_App
             openFileDialog1.Filter = "Text Dosyası |*.txt";
             openFileDialog1.Title = "Sefer Seç";
             openFileDialog1.ShowDialog();
-            string path = openFileDialog1.FileName;
+            path = openFileDialog1.FileName;
             printToMyList(path);
+            printToExpeditionListView();
         }
         private void ticketBuy(object sender, EventArgs e)
         {
@@ -387,8 +402,6 @@ namespace Kocaeli_Travel_App
 
                 printToTxtFile();
                 printToMyList(path);
-                printToArmchairListView(id);
-
             }
         }
         private void ticketCancel(object sender, EventArgs e)
@@ -403,7 +416,6 @@ namespace Kocaeli_Travel_App
 
             printToTxtFile();
             printToMyList(path);
-            printToArmchairListView(id);
         }
 
         private void expeditionListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
