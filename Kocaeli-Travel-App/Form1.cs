@@ -326,9 +326,7 @@ namespace Kocaeli_Travel_App
                 {
                     currentEx = currentEx.Next;
                 }
-
                 currentEx.Next = currentEx.Next.Next;
-
             }
             printToTxtFile();
             printToMyList(path);
