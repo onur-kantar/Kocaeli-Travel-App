@@ -34,22 +34,5 @@ namespace Kocaeli_Travel_App
             }
         }
         
-  
-        public MyList<T> Find(T node)
-        {
-            return Find(node, _head);
-        }
-        public MyList<T> Find(T node, MyList<T> start)
-        {
-            MyList<T> iterator = start;
-            while(iterator!=null)
-            {
-                if (iterator.Data.Equals(node)) return iterator;
-                iterator = iterator.Next;
-                
-                
-            }
-            return null;
-        }
     }
 }
