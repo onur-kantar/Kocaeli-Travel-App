@@ -11,10 +11,12 @@ using System.Windows.Forms;
 
 namespace Kocaeli_Travel_App
 {
-     
+  
     public partial class Form1 : Form
     {
-       
+        
+
+        public static int furkan;
         MyList<Expedition> myList;
         string path;
         public Form1()
@@ -31,12 +33,10 @@ namespace Kocaeli_Travel_App
            string Desktoppath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
            path = Desktoppath + "\\" + date + ".txt";
             
-            //TODO eğer masaüstünde yoksa dosya
-            //az önce gelmişti
             createListView();
-
             printToMyList(path);
             printToExpeditionCounter();
+
         }
 
         private void createListView()
@@ -59,6 +59,7 @@ namespace Kocaeli_Travel_App
 
         public void printToExpeditionCounter()
         {
+            
             int expeditionCounter = 0;
             Node<Expedition> current = myList._head;
             while (current != null)
@@ -67,6 +68,10 @@ namespace Kocaeli_Travel_App
                 expeditionCounter++;
             }
             ExpeditionCounter.Text = expeditionCounter.ToString();
+            furkan = expeditionCounter;
+           
+         
+            
         }
         public void printToMyList(string path)
         {
@@ -194,7 +199,6 @@ namespace Kocaeli_Travel_App
             }
             else
             {
-                expeditionListView.Items.Clear();
                 while (current != null)
                 {
                     string[] expeditionData =
@@ -401,7 +405,7 @@ namespace Kocaeli_Travel_App
                 Node<Armchair> current = findArmchair(findExpedition(id));
 
                 current.Data.Name = buyTicket.data.Name;
-                current.Data.Gender = buyTicket.data.Gender;
+                current.Data.Gender = buyTicket.data.Gender2;
                 current.Data.State = buyTicket.data.State;
 
                 printToTxtFile();
@@ -412,7 +416,7 @@ namespace Kocaeli_Travel_App
         {
             //Todo Bilet İptal
             string id = expeditionListView.SelectedItems[0].Text;
-
+          
             Node<Armchair> current = findArmchair(findExpedition(id));
             current.Data.Name = "";
             current.Data.Gender = "";
@@ -425,6 +429,11 @@ namespace Kocaeli_Travel_App
         private void expeditionListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             printToArmchairListView(e.Item.Text);
+        }
+
+        public void expeditionListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

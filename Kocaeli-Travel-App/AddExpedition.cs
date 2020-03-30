@@ -13,7 +13,8 @@ namespace Kocaeli_Travel_App
     public partial class AddExpedition : Form
     {
         public Expedition expedition;
-          public static int x = 1;
+        public static int x = 1;
+        
 
         public AddExpedition()
         {
@@ -25,11 +26,11 @@ namespace Kocaeli_Travel_App
             //Todo Sefer ekle
 
             x = x + 1;
-        
             expedition = new Expedition(
                 id.Text,
                 road.Text,
-                date.Text,
+              
+               date.Text.ToString(),
                 time.Text,
                 capacity.Text,
                 price.Text,
@@ -39,21 +40,43 @@ namespace Kocaeli_Travel_App
 
             for (int i = 0; i < int.Parse(capacity.Text); i++)
             {
-                expedition.Armchairs.myAdd(new Armchair((i+1).ToString(), "", "", "Boş", price.Text));
+                expedition.Armchairs.myAdd(new Armchair((i + 1).ToString(), "", "", "Boş", price.Text));
             }
 
             this.DialogResult = DialogResult.OK;
             this.Close();
 
-            
+
         }
 
         private void AddExpedition_Load(object sender, EventArgs e)
         {
             id.Text = x.ToString();
+       
+           
 
-            //   x++;
-            //    MessageBox.Show(x.ToString());
+        }
+
+        private void price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void capacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void captain_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                        && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void date2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
