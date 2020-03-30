@@ -33,6 +33,11 @@ namespace Kocaeli_Travel_App
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void BuyTicket_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     public class ComboboxItem
     {

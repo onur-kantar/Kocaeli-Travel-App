@@ -13,6 +13,8 @@ namespace Kocaeli_Travel_App
     public partial class AddExpedition : Form
     {
         public Expedition expedition;
+          public static int x = 1;
+
         public AddExpedition()
         {
             InitializeComponent();
@@ -22,6 +24,8 @@ namespace Kocaeli_Travel_App
         {
             //Todo Sefer ekle
 
+            x = x + 1;
+        
             expedition = new Expedition(
                 id.Text,
                 road.Text,
@@ -41,6 +45,15 @@ namespace Kocaeli_Travel_App
             this.DialogResult = DialogResult.OK;
             this.Close();
 
+            
+        }
+
+        private void AddExpedition_Load(object sender, EventArgs e)
+        {
+            id.Text = x.ToString();
+
+            //   x++;
+            //    MessageBox.Show(x.ToString());
         }
     }
 }

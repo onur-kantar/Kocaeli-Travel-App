@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Kocaeli_Travel_App
 {
+     
     public partial class Form1 : Form
     {
+       
         MyList<Expedition> myList;
         string path;
         public Form1()
@@ -22,13 +24,15 @@ namespace Kocaeli_Travel_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Todo / .
-            //Todo pc'den pc'ye değişme olayı 
-            string date = DateTime.Now.ToString("dd.MM.yyyy");
-            path = @"C:\Users\furkan\Desktop\" + date + ".txt";
-
+              
+           //Todo / .
+           //Todo pc'den pc'ye değişme olayı 
+           string date = DateTime.Now.ToString("dd.MM.yyyy");
+           string Desktoppath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+           path = Desktoppath + "\\" + date + ".txt";
+            
             //TODO eğer masaüstünde yoksa dosya
-
+            //az önce gelmişti
             createListView();
 
             printToMyList(path);
@@ -298,6 +302,7 @@ namespace Kocaeli_Travel_App
         }
         private void delete(object sender, EventArgs e)
         {
+            
             //Todo sil
             string id = expeditionListView.SelectedItems[0].Text;
             Node<Armchair> currentAr;
