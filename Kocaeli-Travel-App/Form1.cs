@@ -22,9 +22,10 @@ namespace Kocaeli_Travel_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            string date = DateTime.Now.ToString("dd/MM/yyyy");
-            path = @"C:\Users\onurk\Desktop\" + date + ".txt";
+            //Todo / .
+            //Todo pc'den pc'ye değişme olayı 
+            string date = DateTime.Now.ToString("dd.MM.yyyy");
+            path = @"C:\Users\furkan\Desktop\" + date + ".txt";
 
             //TODO eğer masaüstünde yoksa dosya
 

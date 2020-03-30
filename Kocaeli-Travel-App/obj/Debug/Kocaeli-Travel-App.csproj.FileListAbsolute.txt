@@ -10,3 +10,15 @@ C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.AddExpedition.resources
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.CaptainChange.resources
 C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.BuyTicket.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\Kocaeli-Travel-App.exe.config
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\Kocaeli-Travel-App.exe
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\Kocaeli-Travel-App.pdb
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.csprojAssemblyReference.cache
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.AddExpedition.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.BuyTicket.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.CaptainChange.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.Form1.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli_Travel_App.Properties.Resources.resources
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.csproj.GenerateResource.cache
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.exe
+C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.pdb
