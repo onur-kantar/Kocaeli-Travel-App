@@ -12,6 +12,7 @@ namespace Kocaeli_Travel_App
 {
     public partial class BuyTicket : Form
     {
+        Commander announcement = new Commander();
         public Data data;
         public BuyTicket()
         {
@@ -23,16 +24,24 @@ namespace Kocaeli_Travel_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            data = new Data(
-                name.Text,
-                gender2.Text,
-                (stateComboBox.SelectedItem as ComboboxItem).Value.ToString()
-                );
-                
+            if (name.Text != null)
+            {
+                data = new Data(
+              name.Text,
+              gender2.Text,
+              (stateComboBox.SelectedItem as ComboboxItem).Value.ToString()
+              );
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                announcement.InfoLogger("Bilet Satın Alındı!");
+            }
+            else
+                MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
+       
+    }
+       
+            
 
         private void BuyTicket_Load(object sender, EventArgs e)
         {

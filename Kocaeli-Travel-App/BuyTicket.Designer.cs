@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.name = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ByTicket = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.stateComboBox = new System.Windows.Forms.ComboBox();
@@ -46,16 +46,16 @@
             this.name.TabIndex = 0;
             this.name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_KeyPress);
             // 
-            // button1
+            // ByTicket
             // 
-            this.button1.Location = new System.Drawing.Point(73, 155);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Satın Al";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ByTicket.Location = new System.Drawing.Point(73, 155);
+            this.ByTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.ByTicket.Name = "ByTicket";
+            this.ByTicket.Size = new System.Drawing.Size(56, 41);
+            this.ByTicket.TabIndex = 4;
+            this.ByTicket.Text = "Satın Al";
+            this.ByTicket.UseVisualStyleBackColor = true;
+            this.ByTicket.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.stateComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ByTicket);
             this.Controls.Add(this.name);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BuyTicket";
@@ -132,7 +132,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ByTicket;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox stateComboBox;

@@ -1,0 +1,104 @@
+2020-04-02 16:46:13.8562 INFO Transaction Baslatildi!
+2020-04-02 16:46:13.9232 WARN Transaction sonlandi ama islemler tamamlanamadi!
+2020-04-02 16:46:13.9232 WARN Transaction sonlandi ama islemler tamamlanamadi!
+2020-04-02 17:45:56.2659 INFO asdsa
+2020-04-02 17:45:56.3310 DEBUG asdas
+2020-04-02 17:45:57.0695 INFO a
+2020-04-02 17:46:23.1700 INFO asdsa
+2020-04-02 17:46:23.2281 DEBUG asdas
+2020-04-02 17:46:23.8905 INFO Sefer Ekleme sayfasina gidildi
+2020-04-02 17:47:02.9032 INFO asdsa
+2020-04-02 17:47:02.9602 DEBUG asdas
+2020-04-02 17:47:37.0644 INFO asdsa
+2020-04-02 17:47:37.1115 DEBUG asdas
+2020-04-02 17:47:42.5373 INFO asdsa
+2020-04-02 17:47:42.5924 DEBUG asdas
+2020-04-02 17:47:51.2339 INFO asdsa
+2020-04-02 17:47:51.2880 DEBUG asdas
+2020-04-02 17:47:55.8342 INFO asdsa
+2020-04-02 17:47:55.8952 DEBUG asdas
+2020-04-02 17:48:01.6623 INFO asdsa
+2020-04-02 17:48:01.7184 DEBUG asdas
+2020-04-02 17:48:03.9750 INFO Sefer Ekleme sayfasina gidildi
+2020-04-02 17:49:37.9336 INFO asdsa
+2020-04-02 17:49:37.9977 DEBUG asdas
+2020-04-02 17:50:46.3192 INFO asdsa
+2020-04-02 17:50:46.3802 DEBUG asdas
+2020-04-02 17:54:09.1451 INFO asdsa
+2020-04-02 17:54:09.1921 DEBUG asdas
+2020-04-02 17:54:32.0223 INFO asdsa
+2020-04-02 17:54:32.0743 DEBUG asdas
+2020-04-02 17:55:25.6904 INFO asdsa
+2020-04-02 17:55:25.7544 DEBUG asdas
+2020-04-02 17:55:56.0009 INFO asdsa
+2020-04-02 17:55:56.0679 DEBUG asdas
+2020-04-02 17:56:30.8156 INFO asdsa
+2020-04-02 17:56:30.8876 DEBUG asdas
+2020-04-02 17:57:05.8744 INFO asdsa
+2020-04-02 17:57:05.9385 DEBUG asdas
+2020-04-02 17:57:55.7588 INFO asdsa
+2020-04-02 17:57:55.8169 DEBUG asdas
+2020-04-02 18:00:00.8236 INFO asdsa
+2020-04-02 18:00:00.8686 DEBUG asdas
+2020-04-02 18:02:26.2467 INFO asdsa
+2020-04-02 18:02:26.2978 DEBUG asdas
+2020-04-02 18:03:44.6670 INFO asdsa
+2020-04-02 18:03:44.7401 DEBUG asdas
+2020-04-02 18:04:16.3825 INFO asdsa
+2020-04-02 18:04:16.4376 DEBUG asdas
+2020-04-02 18:06:49.4111 INFO asdsa
+2020-04-02 18:06:49.4701 DEBUG asdas
+2020-04-02 18:06:55.1502 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 18:07:01.2895 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 18:31:16.1495 INFO asdsa
+2020-04-02 18:31:16.2095 DEBUG asdas
+2020-04-02 18:31:20.7047 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 18:31:22.3939 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 18:31:25.5732 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 18:35:12.9650 INFO asdsa
+2020-04-02 18:35:13.0210 DEBUG asdas
+2020-04-02 18:35:16.2853 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 18:36:41.2316 INFO asdsa
+2020-04-02 18:36:41.2966 DEBUG asdas
+2020-04-02 18:36:45.8198 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 18:36:49.1872 INFO Bilet Satin Alindi!
+2020-04-02 18:37:39.9873 INFO asdsa
+2020-04-02 18:37:40.0493 DEBUG asdas
+2020-04-02 18:37:44.0231 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 18:37:51.3623 INFO Bilet Satin Alindi!
+2020-04-02 18:40:11.6199 INFO asdsa
+2020-04-02 18:40:11.6849 DEBUG asdas
+2020-04-02 18:40:15.9529 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:23:03.6842 INFO asdsa
+2020-04-02 19:23:03.7462 DEBUG asdas
+2020-04-02 19:23:11.9260 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:23:14.4088 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:23:21.7120 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 19:25:15.8249 INFO asdsa
+2020-04-02 19:25:15.8790 DEBUG asdas
+2020-04-02 19:27:37.3343 INFO asdsa
+2020-04-02 19:27:37.4004 DEBUG asdas
+2020-04-02 19:27:42.5240 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:27:44.5785 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:31:42.3482 INFO asdsa
+2020-04-02 19:31:42.4142 DEBUG asdas
+2020-04-02 19:33:54.8005 INFO asdsa
+2020-04-02 19:33:54.8565 DEBUG asdas
+2020-04-02 19:35:19.8118 INFO asdsa
+2020-04-02 19:35:19.8758 DEBUG asdas
+2020-04-02 19:35:24.3220 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:35:27.5072 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:35:30.8176 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:35:48.9955 INFO asdsa
+2020-04-02 19:35:49.0515 DEBUG asdas
+2020-04-02 19:45:20.2628 INFO asdsa
+2020-04-02 19:45:20.3378 DEBUG asdas
+2020-04-02 19:45:27.1667 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:45:30.7352 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 19:45:34.1366 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 19:45:35.6787 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:45:41.0425 WARN Kullanici bilet alma ekranina ulasti
+2020-04-02 19:46:05.3658 INFO asdsa
+2020-04-02 19:46:05.4378 DEBUG asdas
+2020-04-02 19:46:09.2235 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-02 19:46:11.1669 WARN Kullanici bilet alma ekranina ulasti
