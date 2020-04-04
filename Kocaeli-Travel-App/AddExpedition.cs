@@ -14,7 +14,8 @@ namespace Kocaeli_Travel_App
     {
         public Expedition expedition;
         public static int x = 1;
-        
+        Commander announcement = new Commander();
+
 
         public AddExpedition()
         {
@@ -24,28 +25,35 @@ namespace Kocaeli_Travel_App
         private void button1_Click(object sender, EventArgs e)
         {
             //Todo Sefer ekle
-
-            x = x + 1;
-            expedition = new Expedition(
-                id.Text,
-                road.Text,
-              
-               date.Text.ToString(),
-                time.Text,
-                capacity.Text,
-                price.Text,
-                licancePlate.Text,
-                captain.Text
-                );
-
-            for (int i = 0; i < int.Parse(capacity.Text); i++)
+        //    x = x + 1;
+        if(road.SelectedItem!=null  || capacity.Text!="" || price.Text!="" || licancePlate.Text!="" || captain.Text!="")
             {
-                expedition.Armchairs.myAdd(new Armchair((i + 1).ToString(), "", "", "Boş", price.Text));
+                expedition = new Expedition(
+               id.Text,
+               road.Text,
+              date.Text.ToString(),
+               time.Text,
+               capacity.Text,
+               price.Text,
+               licancePlate.Text,
+               captain.Text
+               );
+                
+                for (int i = 0; i < int.Parse(capacity.Text); i++)
+                {
+                    expedition.Armchairs.myAdd(new Armchair((i + 1).ToString(), "", "", "Boş", price.Text));
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                announcement.InfoLogger("Sefer Eklendi!");
             }
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-
+           
+        else
+            {
+                MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
+            }
+           
 
         }
 
@@ -77,6 +85,11 @@ namespace Kocaeli_Travel_App
         private void date2_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void capacity_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
