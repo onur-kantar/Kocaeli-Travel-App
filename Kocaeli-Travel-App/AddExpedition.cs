@@ -13,8 +13,9 @@ namespace Kocaeli_Travel_App
     public partial class AddExpedition : Form
     {
         public Expedition expedition;
-        public static int x = 1;
-        
+      //  public static int x = 1;
+
+        Commander announcement = new Commander();
 
         public AddExpedition()
         {
@@ -25,36 +26,57 @@ namespace Kocaeli_Travel_App
         {
             //Todo Sefer ekle
 
-            x = x + 1;
-            expedition = new Expedition(
-                id.Text,
-                road.Text,
-              
-               date.Text.ToString(),
-                time.Text,
-                capacity.Text,
-                price.Text,
-                licancePlate.Text,
-                captain.Text
-                );
-
-            for (int i = 0; i < int.Parse(capacity.Text); i++)
+       if(road.SelectedItem!=null && capacity.Text!="" && time.Text!="" && price.Text!="" && licancePlate.Text!="" && captain.Text!="")
             {
-                expedition.Armchairs.myAdd(new Armchair((i + 1).ToString(), "", "", "Boş", price.Text));
+                expedition = new Expedition(
+              id.Text,
+              road.Text,
+
+             date.Text.ToString(),
+              time.Text,
+              capacity.Text,
+              price.Text,
+              licancePlate.Text,
+              captain.Text
+              );
+
+                for (int i = 0; i < int.Parse(capacity.Text); i++)
+                {
+                    expedition.Armchairs.myAdd(new Armchair((i + 1).ToString(), "", "", "Boş", price.Text));
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                announcement.InfoLogger("Kullanıcı sefer oluşturdu!");
             }
+       else
+            {
+                MessageBox.Show("Lütfen tüm bilgileri doğru bir şekilde doldurunuz!");
+                announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan sefer eklemek istedi!");
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-
-
+            }
+          
         }
-
         private void AddExpedition_Load(object sender, EventArgs e)
         {
-            id.Text = x.ToString();
-       
-           
+              int c = Form1.expeditionCounter + 1;
+           id.Text = c.ToString();
+             
+            
 
+            /*
+            int sefer = expeditionListView.Items.Count + 1;
+           MessageBox.Show(sefer.ToString());
+           MessageBox.Show(expeditionCounter.ToString());
+           if (sefer > expeditionCounter)
+            {
+
+            }
+            else
+            {
+
+            }
+            */
         }
 
         private void price_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,6 +97,11 @@ namespace Kocaeli_Travel_App
         }
 
         private void date2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void time_TextChanged(object sender, EventArgs e)
         {
 
         }

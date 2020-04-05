@@ -168,3 +168,208 @@
 2020-04-05 17:38:17.9859 DEBUG asdas
 2020-04-05 17:41:34.4192 INFO asdsa
 2020-04-05 17:41:34.4723 DEBUG asdas
+2020-04-05 18:26:14.1869 INFO Gelir hesaplandi!
+2020-04-05 18:26:49.1847 INFO Gelir hesaplandi!
+2020-04-05 18:27:11.4375 INFO Kullanici bileti iptal etti!
+2020-04-05 18:27:27.7381 INFO Kullanici bileti iptal etti!
+2020-04-05 18:27:29.8616 INFO Kullanici bileti iptal etti!
+2020-04-05 18:27:41.4648 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 18:27:47.0097 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 18:27:55.9141 WARN Kullanici bilet satilmis bir seferi silmek istedi!
+2020-04-05 18:28:43.3897 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 18:29:03.6721 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 18:29:09.2951 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 18:29:26.9196 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 18:30:02.8011 INFO Kullanici bileti iptal etti!
+2020-04-05 18:30:22.6171 INFO Gelir hesaplandi!
+2020-04-05 18:30:31.4034 INFO Bilet Satin Alindi!
+2020-04-05 18:30:31.4234 INFO Kullanici bilet satin alma islemini tamamladi!
+2020-04-05 18:30:35.8715 INFO Gelir hesaplandi!
+2020-04-05 18:30:38.1682 INFO Gelir hesaplandi!
+2020-04-05 18:31:37.1230 INFO Gelir hesaplandi!
+2020-04-05 18:31:40.6575 INFO Gelir hesaplandi!
+2020-04-05 18:31:45.7221 INFO Gelir hesaplandi!
+2020-04-05 18:31:48.3500 INFO Gelir hesaplandi!
+2020-04-05 18:31:51.3521 INFO Gelir hesaplandi!
+2020-04-05 18:31:57.4935 INFO Gelir hesaplandi!
+2020-04-05 18:31:59.8731 INFO Gelir hesaplandi!
+2020-04-05 18:32:33.6371 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 18:33:00.9001 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 18:33:08.0832 INFO Bilet Satin Alindi!
+2020-04-05 18:33:08.0832 INFO Kullanici bilet satin alma islemini tamamladi!
+2020-04-05 18:33:13.4490 INFO Gelir hesaplandi!
+2020-04-05 18:33:17.5139 INFO Gelir hesaplandi!
+2020-04-05 18:34:09.4598 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 18:35:29.7107 INFO Kullanici bileti iptal etti!
+2020-04-05 18:35:38.2838 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 18:35:45.4719 INFO Bilet Satin Alindi!
+2020-04-05 18:35:45.4719 INFO Kullanici bilet satin alma islemini tamamladi!
+2020-04-05 18:35:51.4671 INFO Gelir hesaplandi!
+2020-04-05 18:35:53.4616 INFO Gelir hesaplandi!
+2020-04-05 18:36:01.5893 INFO Gelir hesaplandi!
+2020-04-05 18:36:10.0333 INFO Gelir hesaplandi!
+2020-04-05 18:36:14.2213 INFO Gelir hesaplandi!
+2020-04-05 18:36:18.2471 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 19:13:39.2860 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:13:51.4016 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 19:13:59.7706 INFO Bilet Satin Alindi!
+2020-04-05 19:13:59.7836 INFO Kullanici bilet satin alma islemini tamamladi!
+2020-04-05 19:14:05.5046 INFO Kullanici bileti iptal etti!
+2020-04-05 19:14:09.4344 WARN Kullanici bos koltuga bilet almaya çalisti!
+2020-04-05 19:14:10.9925 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:14:53.2935 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:15:25.1101 INFO Kullanici bileti iptal etti!
+2020-04-05 19:16:34.1361 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:16:43.9070 INFO Bilet Satin Alindi!
+2020-04-05 19:16:43.9070 INFO Kullanici bilet satin alma islemini tamamladi!
+2020-04-05 19:17:22.2222 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-05 19:21:34.0038 INFO Bilet Satin Alindi!
+2020-04-05 19:21:34.0729 INFO Kullanici bilet satin alma islemini tamamladi!
+2020-04-05 19:21:40.3783 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:21:51.8385 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:22:01.5864 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:22:24.3075 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:22:48.6968 INFO Bilet Satin Alindi!
+2020-04-05 19:23:59.7442 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 19:37:58.6584 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 20:01:40.7079 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 20:02:02.0660 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 20:10:23.1893 INFO Sefer Silindi
+2020-04-05 20:10:27.1721 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 20:10:44.7486 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 20:11:07.6308 INFO Sefer Silindi
+2020-04-05 20:11:15.3743 INFO Sefer Silindi
+2020-04-05 20:12:03.8147 INFO Sefer Silindi
+2020-04-05 20:12:05.1786 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:06:19.9826 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:07:19.8301 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:07:35.0989 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:07:37.8589 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:07:44.5746 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:08:35.9521 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:08:40.8165 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:09:01.8414 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:09:37.6548 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:03.0319 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:05.1624 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:08.3566 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:20.5683 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:33.7026 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:36.5406 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:38.1768 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:43.9849 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:50.7427 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:10:54.4764 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:11:03.1665 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:14:55.7435 WARN Kullanici koltuk ve sefer seçimi yapmadan bilet iptal etmeye çalisti!
+2020-04-05 21:14:58.0121 INFO Sefer Silindi
+2020-04-05 21:15:00.9062 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:15:21.6979 WARN Kullanici koltuk ve sefer seçimi yapmadan bilet iptal etmeye çalisti!
+2020-04-05 21:15:22.6506 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:16:38.3873 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:16:52.0941 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:16:55.7066 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:17:24.2839 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:17:34.7483 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:17:45.6691 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:17:50.8611 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:17:59.5443 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:18:31.7891 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:18:39.3625 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:18:54.1780 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:19:06.9751 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:20:06.7575 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:20:14.9013 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:25:00.2708 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:44:31.7041 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:46:04.7291 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:46:42.2818 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:47:04.8778 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:47:48.9732 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:48:33.2056 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:49:34.0207 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:51:35.0376 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:52:58.3567 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:53:15.5859 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:53:28.7839 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:54:39.5141 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:55:01.1154 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:55:51.3671 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:56:54.6009 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:57:30.4604 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:58:57.4971 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 21:59:34.1481 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:02:21.0005 WARN Kullanici herhangi bir sefer seçimi yapmadan,sefer silme islemi yapmak istedi!
+2020-04-05 22:02:22.0983 INFO Kaptan Degistirme Sayfasina Gidildi
+2020-04-05 22:03:38.5939 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:03:45.1666 INFO Kullanici sefer olusturdu!
+2020-04-05 22:03:51.1908 INFO Kaptan Degistirme Sayfasina Gidildi
+2020-04-05 22:03:56.2074 INFO Kaptan Degistirme Sayfasina Gidildi
+2020-04-05 22:03:59.1155 INFO Kaptan degistirildi!
+2020-04-05 22:04:50.3798 INFO Sefer Silindi
+2020-04-05 22:05:29.0162 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:05:38.8292 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:05:44.7544 INFO Kullanici sefer olusturdu!
+2020-04-05 22:05:54.9176 INFO Sefer Silindi
+2020-04-05 22:05:56.0644 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:06:04.7556 INFO Kullanici sefer olusturdu!
+2020-04-05 22:06:10.7599 WARN Kullanici herhangi bir sefer seçimi yapmadan,sefer silme islemi yapmak istedi!
+2020-04-05 22:06:13.7970 WARN Kullanici herhangi bir sefer seçimi yapmadan,sefer silme islemi yapmak istedi!
+2020-04-05 22:06:22.2530 INFO Gelir hesaplandi!
+2020-04-05 22:06:24.5406 INFO Gelir hesaplandi!
+2020-04-05 22:06:27.1535 INFO Gelir hesaplandi!
+2020-04-05 22:06:32.3772 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-05 22:06:36.7653 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-05 22:06:40.0376 WARN Kullanici sefer ve koltuk seçmeden islem yapmaya çalisti!
+2020-04-05 22:07:17.3159 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:10:31.7788 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:11:04.4980 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:11:48.2070 INFO Sefer Silindi
+2020-04-05 22:11:54.0472 INFO Sefer Silindi
+2020-04-05 22:12:13.4640 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:12:21.0213 INFO Kullanici sefer olusturdu!
+2020-04-05 22:12:24.2066 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:18:38.1894 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:19:35.8853 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:19:43.1134 INFO Kullanici sefer olusturdu!
+2020-04-05 22:19:43.9080 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:19:50.7779 INFO Kullanici sefer olusturdu!
+2020-04-05 22:19:51.7836 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:20:01.0411 INFO Sefer Silindi
+2020-04-05 22:20:02.9695 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:20:12.9396 INFO Kullanici sefer olusturdu!
+2020-04-05 22:20:19.5343 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:20:33.4291 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:21:03.7816 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:21:37.8318 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:24:13.1230 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:27:23.6842 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:27:32.1712 WARN Kullanici tüm bilgileri doldurmadan sefer eklemek istedi!
+2020-04-05 22:27:33.5342 INFO Kullanici sefer olusturdu!
+2020-04-05 22:27:58.9892 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:28:04.7253 INFO Kullanici sefer olusturdu!
+2020-04-05 22:30:06.9110 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:37:56.4343 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:38:06.2302 INFO Kullanici sefer olusturdu!
+2020-04-05 22:38:10.7164 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:38:21.0407 INFO Kullanici sefer olusturdu!
+2020-04-05 22:38:23.6946 INFO Sefer Silindi
+2020-04-05 22:38:28.3829 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:40:58.5314 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:41:22.4434 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:44:41.7975 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:45:21.8800 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:48:28.8171 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:48:51.7824 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:49:13.1335 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:49:15.8675 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 22:49:19.6762 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 23:12:52.1023 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 23:12:56.8767 WARN Kullanici tüm bilgileri doldurmadan sefer eklemek istedi!
+2020-04-05 23:13:05.5088 WARN Kullanici tüm bilgileri doldurmadan sefer eklemek istedi!
+2020-04-05 23:13:08.1366 INFO Kullanici sefer olusturdu!
+2020-04-05 23:13:14.6653 INFO Sefer Silindi
+2020-04-05 23:13:17.8025 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 23:13:41.0590 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 23:14:04.3876 INFO Sefer Ekleme sayfasina gidildi
+2020-04-05 23:16:49.2936 INFO Sefer Ekleme sayfasina gidildi

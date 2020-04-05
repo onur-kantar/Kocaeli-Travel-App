@@ -44,7 +44,7 @@
             this.id = new System.Windows.Forms.TextBox();
             this.road = new System.Windows.Forms.ComboBox();
             this.date = new System.Windows.Forms.DateTimePicker();
-            this.time = new System.Windows.Forms.MaskedTextBox();
+            this.time = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // capacity
@@ -204,12 +204,12 @@
             // 
             // time
             // 
-            this.time.Location = new System.Drawing.Point(74, 82);
-            this.time.Mask = "90:00";
+            this.time.Location = new System.Drawing.Point(74, 81);
+            this.time.Margin = new System.Windows.Forms.Padding(2);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(76, 20);
-            this.time.TabIndex = 21;
-            this.time.ValidatingType = typeof(System.DateTime);
+            this.time.TabIndex = 22;
+            this.time.TextChanged += new System.EventHandler(this.time_TextChanged);
             // 
             // AddExpedition
             // 
@@ -259,6 +259,6 @@
         private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.ComboBox road;
         private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.MaskedTextBox time;
+        private System.Windows.Forms.TextBox time;
     }
 }

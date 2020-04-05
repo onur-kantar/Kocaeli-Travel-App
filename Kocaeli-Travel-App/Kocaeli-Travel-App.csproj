@@ -76,7 +76,6 @@
     <Compile Include="CaptainChange.Designer.cs">
       <DependentUpon>CaptainChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogerManager.cs" />
     <Compile Include="ModelsFile\Armchair.cs" />
     <Compile Include="ModelsFile\Expedition.cs" />
     <Compile Include="Form1.cs">
