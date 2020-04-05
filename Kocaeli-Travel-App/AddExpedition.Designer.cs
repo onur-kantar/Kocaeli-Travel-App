@@ -54,7 +54,6 @@
             this.capacity.Name = "capacity";
             this.capacity.Size = new System.Drawing.Size(76, 20);
             this.capacity.TabIndex = 4;
-            this.capacity.TextChanged += new System.EventHandler(this.capacity_TextChanged);
             this.capacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.capacity_KeyPress);
             // 
             // price

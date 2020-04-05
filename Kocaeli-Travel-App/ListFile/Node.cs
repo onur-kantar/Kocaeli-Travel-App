@@ -17,5 +17,4 @@ namespace Kocaeli_Travel_App
             Next = null;
         }
     }
-   
 }

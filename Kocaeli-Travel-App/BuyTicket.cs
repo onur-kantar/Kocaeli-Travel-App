@@ -21,32 +21,38 @@ namespace Kocaeli_Travel_App
             stateComboBox.Items.Add(new ComboboxItem { Text = "Satın Al", Value = "Dolu" });
             stateComboBox.Items.Add(new ComboboxItem { Text = "Rezerve Et", Value = "Rezerve" });
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (gender.SelectedItem!=null && stateComboBox.SelectedItem!=null && name.Text != "" )
+            if (name.Text != null)
             {
-             data = new Data(
+                data = new Data(
               name.Text,
-              gender.Text,
-              (stateComboBox.SelectedItem as ComboboxItem).Value.ToString());
+              gender2.Text,
+              (stateComboBox.SelectedItem as ComboboxItem).Value.ToString()
+              );
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
                 announcement.InfoLogger("Bilet Satın Alındı!");
             }
             else
-            {
-                MessageBox.Show("Lütfen tüm bilgileri doğru bir şekilde doldurunuz!");
-                announcement.WarnLogger("Kullanıcı bilet satın alma işlemi yaparken tüm bilgileri doldurmadı!");
-            }                   
+                MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
+       
     }
+       
+            
+
         private void BuyTicket_Load(object sender, EventArgs e)
         {
 
         }
+
         private void gender2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
         private void name_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
