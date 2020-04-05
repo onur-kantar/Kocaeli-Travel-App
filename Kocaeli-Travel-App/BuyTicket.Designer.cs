@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.stateComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.gender2 = new System.Windows.Forms.ComboBox();
+            this.gender = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // name
@@ -96,24 +96,24 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Durum";
             // 
-            // gender2
+            // gender
             // 
-            this.gender2.FormattingEnabled = true;
-            this.gender2.Items.AddRange(new object[] {
+            this.gender.FormattingEnabled = true;
+            this.gender.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.gender2.Location = new System.Drawing.Point(74, 71);
-            this.gender2.Name = "gender2";
-            this.gender2.Size = new System.Drawing.Size(76, 21);
-            this.gender2.TabIndex = 20;
-            this.gender2.SelectedIndexChanged += new System.EventHandler(this.gender2_SelectedIndexChanged);
+            this.gender.Location = new System.Drawing.Point(74, 71);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(76, 21);
+            this.gender.TabIndex = 20;
+            this.gender.SelectedIndexChanged += new System.EventHandler(this.gender2_SelectedIndexChanged);
             // 
             // BuyTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(212, 206);
-            this.Controls.Add(this.gender2);
+            this.Controls.Add(this.gender);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.stateComboBox);
             this.Controls.Add(this.label2);
@@ -137,6 +137,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox stateComboBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox gender2;
+        private System.Windows.Forms.ComboBox gender;
     }
 }

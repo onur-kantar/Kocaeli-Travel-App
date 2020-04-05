@@ -28,11 +28,7 @@ namespace Kocaeli_Travel_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //      Commander test = new Commander();
-            announcement.InfoLogger("asdsa");
-            announcement.DebugLogger("asdas");
-
-
+       
 
             //Todo / .
             //Todo pc'den pc'ye değişme olayı 
@@ -311,41 +307,51 @@ namespace Kocaeli_Travel_App
         }
         private void delete(object sender, EventArgs e)
         {
-            announcement.InfoLogger("Sefer Silindi");
+          
             //Todo sil
-            string id = expeditionListView.SelectedItems[0].Text;
-            Node<Armchair> currentAr;
-
-            Node<Expedition> current = findExpedition(id);
-
-            currentAr = current.Data.Armchairs._head;
-            while (currentAr != null)
+            if (expeditionListView.SelectedItems.Count > 0)
             {
-                if (currentAr.Data.State != "Boş")
+                string id = expeditionListView.SelectedItems[0].Text;
+                Node<Armchair> currentAr;
+
+                Node<Expedition> current = findExpedition(id);
+
+                currentAr = current.Data.Armchairs._head;
+                while (currentAr != null)
                 {
-                    MessageBox.Show("Sefer Satılmış Koltuk İçeriyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    if (currentAr.Data.State != "Boş")
+                    {
+                        announcement.WarnLogger("Kullanıcı bilet satılmış bir seferi silmek istedi!");
+                        MessageBox.Show("Sefer Satılmış Koltuk İçeriyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    currentAr = currentAr.Next;
                 }
-                currentAr = currentAr.Next;
-            }
 
-            if (myList._head.Data.Id == id)
-            {
-                myList._head = myList._head.Next;
+                if (myList._head.Data.Id == id)
+                {
+                    myList._head = myList._head.Next;
+                }
+                else
+                {
+                    Node<Expedition> currentEx = myList._head;
+
+                    while (id != currentEx.Next.Data.Id)
+                    {
+                        currentEx = currentEx.Next;
+                    }
+                    currentEx.Next = currentEx.Next.Next;
+                }
+                printToTxtFile();
+                printToMyList(path);
+                printToExpeditionListView();
+                announcement.InfoLogger("Sefer Silindi");
             }
             else
             {
-                Node<Expedition> currentEx = myList._head;
-
-                while (id != currentEx.Next.Data.Id)
-                {
-                    currentEx = currentEx.Next;
-                }
-                currentEx.Next = currentEx.Next.Next;
-            }
-            printToTxtFile();
-            printToMyList(path);
-            printToExpeditionListView();
+                MessageBox.Show("Lütfen silinecek olan seferi seçiniz!");
+                announcement.WarnLogger("Kullanıcı herhangi bir sefer seçimi yapmadan,sefer silme işlemi yapmak istedi!");
+            }        
         }
         private void captainChange(object sender, EventArgs e)
         {
@@ -387,6 +393,7 @@ namespace Kocaeli_Travel_App
                 currentAr = currentAr.Next;
             }
             MessageBox.Show(sum.ToString() + " TL", "Toplam Gelir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            announcement.InfoLogger("Gelir hesaplandı!");
         }
         private void selectDate(object sender, EventArgs e)
         {
@@ -400,55 +407,75 @@ namespace Kocaeli_Travel_App
         }
         private void ticketBuy(object sender, EventArgs e)
         {
-
-            if (armchairListView.SelectedItems.Count > 0)
+          
+            //Todo Bilet Satın Al
+            if (armchairListView.SelectedItems.Count > 0 && expeditionListView.SelectedItems.Count>0)
             {
-                announcement.WarnLogger("Kullanıcı bilet alma ekranına ulaştı");
-                //Todo Bilet Satın Al
-                //Node<Armchair> current = findArmchairWithSelectedId(findExpeditionWithSelectedId());
-                string id = expeditionListView.SelectedItems[0].Text;
-
-                BuyTicket buyTicket = new BuyTicket();
-                buyTicket.ShowDialog();
-                if (buyTicket.DialogResult == DialogResult.OK)
+               
+                if (armchairListView.SelectedItems[0].SubItems[3].Text!="Dolu")
                 {
-                    Node<Armchair> current = findArmchair(findExpedition(id));
+                    //Node<Armchair> current = findArmchairWithSelectedId(findExpeditionWithSelectedId());
+                    string id = expeditionListView.SelectedItems[0].Text;
+                    BuyTicket buyTicket = new BuyTicket();
+                    buyTicket.ShowDialog();
+                    if (buyTicket.DialogResult == DialogResult.OK)
+                    {
+                        Node<Armchair> current = findArmchair(findExpedition(id));
+                        current.Data.Name = buyTicket.data.Name;
+                        current.Data.Gender = buyTicket.data.Gender2;
+                        current.Data.State = buyTicket.data.State;
 
-                    current.Data.Name = buyTicket.data.Name;
-                    current.Data.Gender = buyTicket.data.Gender2;
-                    current.Data.State = buyTicket.data.State;
-
-                    printToTxtFile();
-                    printToMyList(path);
+                        printToTxtFile();
+                        printToMyList(path);
+                        announcement.InfoLogger("Kullanıcı bilet satın alma işlemini tamamladı!");    
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen boş bir koltuk seçiniz!");
+                     announcement.WarnLogger("Kullanıcı dolu koltuğa bilet almaya çalıştı!");       
                 }
             }
-
-            else if(armchairListView.Columns.ToString()=="Dolu")
-            {
-                MessageBox.Show("adasd");
-            }
-        
-        
+                   
             else
-            {
-                MessageBox.Show("Lütfen sefer ve koltuk seçiniz!");
-                announcement.WarnLogger("Kullanıcı sefer ve koltuk seçmeden işlem yapmaya çalıştı!");
-            }
-         
-    
+                {
+                    MessageBox.Show("Lütfen sefer ve koltuk seçiniz!");
+                    announcement.WarnLogger("Kullanıcı sefer ve koltuk seçmeden işlem yapmaya çalıştı!");
+                }
+            
+                
         }
         private void ticketCancel(object sender, EventArgs e)
         {
             //Todo Bilet İptal
-            string id = expeditionListView.SelectedItems[0].Text;
-          
-            Node<Armchair> current = findArmchair(findExpedition(id));
-            current.Data.Name = "";
-            current.Data.Gender = "";
-            current.Data.State = "Boş";
+            if (armchairListView.SelectedItems.Count > 0 && expeditionListView.SelectedItems.Count>0)
+            {
+              
+                if (armchairListView.SelectedItems[0].SubItems[3].Text == "Dolu")
+                {
+                    string id = expeditionListView.SelectedItems[0].Text;
+                    Node<Armchair> current = findArmchair(findExpedition(id));
+                    current.Data.Name = "";
+                    current.Data.Gender = "";
+                    current.Data.State = "Boş";
 
-            printToTxtFile();
-            printToMyList(path);
+                    printToTxtFile();
+                    printToMyList(path);
+                    announcement.InfoLogger("Kullanıcı bileti iptal etti!");
+                }
+                else
+                {
+                    MessageBox.Show("Koltuk zaten boş!");
+                    announcement.WarnLogger("Kullanıcı boş koltuğa bilet almaya çalıştı!");
+                }
+                    
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silinecek olan seferi ve koltuğu seçiniz!");
+                announcement.WarnLogger("Kullanıcı koltuk ve sefer seçimi yapmadan bilet iptal etmeye çalıştı!");
+            }
+               
         }
 
         private void expeditionListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)

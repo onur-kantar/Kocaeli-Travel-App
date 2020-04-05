@@ -24,11 +24,11 @@ namespace Kocaeli_Travel_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (name.Text != null)
+            if (name.Text!="" && gender.SelectedItem!=null && stateComboBox.SelectedItem!=null)
             {
                 data = new Data(
               name.Text,
-              gender2.Text,
+              gender.Text,
               (stateComboBox.SelectedItem as ComboboxItem).Value.ToString()
               );
 
@@ -37,7 +37,11 @@ namespace Kocaeli_Travel_App
                 announcement.InfoLogger("Bilet Satın Alındı!");
             }
             else
+            {
                 MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
+                announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan bilet satın almaya çalıştı!");
+            }
+              
        
     }
        
