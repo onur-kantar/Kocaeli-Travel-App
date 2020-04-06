@@ -12,6 +12,7 @@ namespace Kocaeli_Travel_App
 {
     public partial class AddExpedition : Form
     {
+       
         public Expedition expedition;
       //  public static int x = 1;
 
@@ -53,31 +54,24 @@ namespace Kocaeli_Travel_App
             {
                 MessageBox.Show("Lütfen tüm bilgileri doğru bir şekilde doldurunuz!");
                 announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan sefer eklemek istedi!");
-
-            }
-          
+            }       
         }
+        public static int number;
         private void AddExpedition_Load(object sender, EventArgs e)
-        {
-              int c = Form1.expeditionCounter + 1;
-           id.Text = c.ToString();
-             
-            
-
-            /*
-            int sefer = expeditionListView.Items.Count + 1;
-           MessageBox.Show(sefer.ToString());
-           MessageBox.Show(expeditionCounter.ToString());
-           if (sefer > expeditionCounter)
+         {
+            number = int.Parse(Form1.lastline.ToString());
+                MessageBox.Show(number.ToString());
+            if (number>0)
             {
-
+                id.Text = number.ToString();
+                
             }
             else
             {
-
+                id.Text = 1.ToString();
             }
-            */
-        }
+           
+          }
 
         private void price_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -95,12 +89,10 @@ namespace Kocaeli_Travel_App
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                         && !char.IsSeparator(e.KeyChar);
         }
-
         private void date2_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
         private void time_TextChanged(object sender, EventArgs e)
         {
 

@@ -188,10 +188,13 @@
             this.road.Items.AddRange(new object[] {
             "Kocaeli-Ankara",
             "Kocaeli-İstanbul",
-            "Kocaeli-İzmir"});
+            "Kocaeli-İzmir",
+            "Ankara-Kocaeli",
+            "İstanbul-Kocaeli",
+            "İzmir-Kocaeli"});
             this.road.Location = new System.Drawing.Point(74, 36);
             this.road.Name = "road";
-            this.road.Size = new System.Drawing.Size(91, 21);
+            this.road.Size = new System.Drawing.Size(97, 21);
             this.road.TabIndex = 19;
             // 
             // date
