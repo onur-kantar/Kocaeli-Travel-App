@@ -85,5 +85,20 @@ namespace Kocaeli_Travel_App
         private void time_TextChanged(object sender, EventArgs e)
         {
         }
+
+        private void road_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void captain_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void licancePlate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

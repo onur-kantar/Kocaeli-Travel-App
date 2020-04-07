@@ -30,8 +30,6 @@
         {
             this.capacity = new System.Windows.Forms.TextBox();
             this.price = new System.Windows.Forms.TextBox();
-            this.licancePlate = new System.Windows.Forms.TextBox();
-            this.captain = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +43,8 @@
             this.road = new System.Windows.Forms.ComboBox();
             this.date = new System.Windows.Forms.DateTimePicker();
             this.time = new System.Windows.Forms.TextBox();
+            this.captain = new System.Windows.Forms.ComboBox();
+            this.licancePlate = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // capacity
@@ -52,7 +52,7 @@
             this.capacity.Location = new System.Drawing.Point(74, 105);
             this.capacity.Margin = new System.Windows.Forms.Padding(2);
             this.capacity.Name = "capacity";
-            this.capacity.Size = new System.Drawing.Size(76, 20);
+            this.capacity.Size = new System.Drawing.Size(97, 20);
             this.capacity.TabIndex = 4;
             this.capacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.capacity_KeyPress);
             // 
@@ -61,26 +61,9 @@
             this.price.Location = new System.Drawing.Point(74, 128);
             this.price.Margin = new System.Windows.Forms.Padding(2);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(76, 20);
+            this.price.Size = new System.Drawing.Size(97, 20);
             this.price.TabIndex = 5;
             this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
-            // 
-            // licancePlate
-            // 
-            this.licancePlate.Location = new System.Drawing.Point(74, 150);
-            this.licancePlate.Margin = new System.Windows.Forms.Padding(2);
-            this.licancePlate.Name = "licancePlate";
-            this.licancePlate.Size = new System.Drawing.Size(76, 20);
-            this.licancePlate.TabIndex = 6;
-            // 
-            // captain
-            // 
-            this.captain.Location = new System.Drawing.Point(74, 173);
-            this.captain.Margin = new System.Windows.Forms.Padding(2);
-            this.captain.Name = "captain";
-            this.captain.Size = new System.Drawing.Size(76, 20);
-            this.captain.TabIndex = 7;
-            this.captain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.captain_KeyPress);
             // 
             // label1
             // 
@@ -179,7 +162,7 @@
             this.id.Margin = new System.Windows.Forms.Padding(2);
             this.id.Name = "id";
             this.id.ReadOnly = true;
-            this.id.Size = new System.Drawing.Size(76, 20);
+            this.id.Size = new System.Drawing.Size(97, 20);
             this.id.TabIndex = 0;
             // 
             // road
@@ -196,12 +179,13 @@
             this.road.Name = "road";
             this.road.Size = new System.Drawing.Size(97, 21);
             this.road.TabIndex = 19;
+            this.road.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.road_KeyPress);
             // 
             // date
             // 
             this.date.Location = new System.Drawing.Point(74, 58);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(76, 20);
+            this.date.Size = new System.Drawing.Size(97, 20);
             this.date.TabIndex = 20;
             this.date.ValueChanged += new System.EventHandler(this.date2_ValueChanged);
             // 
@@ -210,15 +194,43 @@
             this.time.Location = new System.Drawing.Point(74, 81);
             this.time.Margin = new System.Windows.Forms.Padding(2);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(76, 20);
+            this.time.Size = new System.Drawing.Size(97, 20);
             this.time.TabIndex = 22;
             this.time.TextChanged += new System.EventHandler(this.time_TextChanged);
+            // 
+            // captain
+            // 
+            this.captain.FormattingEnabled = true;
+            this.captain.Items.AddRange(new object[] {
+            "Ramazan Furkan Çınar",
+            "Onur Kantar",
+            "Lütfü Sevinç",
+            "Mert Yakar"});
+            this.captain.Location = new System.Drawing.Point(74, 173);
+            this.captain.Name = "captain";
+            this.captain.Size = new System.Drawing.Size(97, 21);
+            this.captain.TabIndex = 23;
+            this.captain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.captain_KeyPress_1);
+            // 
+            // licancePlate
+            // 
+            this.licancePlate.FormattingEnabled = true;
+            this.licancePlate.Items.AddRange(new object[] {
+            "41 BSM 3441",
+            "41 ISE 9898"});
+            this.licancePlate.Location = new System.Drawing.Point(74, 150);
+            this.licancePlate.Name = "licancePlate";
+            this.licancePlate.Size = new System.Drawing.Size(97, 21);
+            this.licancePlate.TabIndex = 24;
+            this.licancePlate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.licancePlate_KeyPress);
             // 
             // AddExpedition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(220, 247);
+            this.Controls.Add(this.licancePlate);
+            this.Controls.Add(this.captain);
             this.Controls.Add(this.time);
             this.Controls.Add(this.date);
             this.Controls.Add(this.road);
@@ -232,8 +244,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.captain);
-            this.Controls.Add(this.licancePlate);
             this.Controls.Add(this.price);
             this.Controls.Add(this.capacity);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -248,8 +258,6 @@
         #endregion
         private System.Windows.Forms.TextBox capacity;
         private System.Windows.Forms.TextBox price;
-        private System.Windows.Forms.TextBox licancePlate;
-        private System.Windows.Forms.TextBox captain;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -263,5 +271,7 @@
         private System.Windows.Forms.ComboBox road;
         private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.TextBox time;
+        private System.Windows.Forms.ComboBox captain;
+        private System.Windows.Forms.ComboBox licancePlate;
     }
 }
