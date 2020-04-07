@@ -27,7 +27,7 @@ namespace Kocaeli_Travel_App
         {
             //Todo Sefer ekle
 
-       if(road.SelectedItem!=null && capacity.Text!="" && time.Text!="" && price.Text!="" && licancePlate.Text!="" && captain.Text!="")
+            if (road.SelectedItem!=null && capacity.Text!="" && time.Text!="" && price.Text!="" && licancePlate.Text!="" && captain.Text!="")
             {
                 expedition = new Expedition(
               id.Text,
@@ -45,12 +45,13 @@ namespace Kocaeli_Travel_App
                 {
                     expedition.Armchairs.myAdd(new Armchair((i + 1).ToString(), "", "", "Boş", price.Text));
                 }
-
                 this.DialogResult = DialogResult.OK;
                 this.Close();
                 announcement.InfoLogger("Kullanıcı sefer oluşturdu!");
+                Form1.id++;
+                Form1.Count++; 
             }
-       else
+            else
             {
                 MessageBox.Show("Lütfen tüm bilgileri doğru bir şekilde doldurunuz!");
                 announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan sefer eklemek istedi!");
@@ -59,20 +60,9 @@ namespace Kocaeli_Travel_App
         public static int number;
         private void AddExpedition_Load(object sender, EventArgs e)
          {
-            number = int.Parse(Form1.lastline.ToString());
-                MessageBox.Show(number.ToString());
-            if (number>0)
-            {
-                id.Text = number.ToString();
-                
-            }
-            else
-            {
-                id.Text = 1.ToString();
-            }
-           
-          }
-
+            id.Text = (Form1.id + 1).ToString();
+            announcement.InfoLogger("Sefer ekleme sayfası açıldı");
+        }
         private void price_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
@@ -91,11 +81,9 @@ namespace Kocaeli_Travel_App
         }
         private void date2_ValueChanged(object sender, EventArgs e)
         {
-
         }
         private void time_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -25,7 +25,12 @@ namespace Kocaeli_Travel_App
         public Form1()
         {      
         InitializeComponent();        
-         } 
+         }
+        public static int expeditionCounter = 0;
+     //   public static int lastline;
+       // public static int sefercount;
+        public static int id = 0;
+        public static int Count;
         private void Form1_Load(object sender, EventArgs e)
         {
             //Todo / .
@@ -37,6 +42,11 @@ namespace Kocaeli_Travel_App
             createListView();
             printToMyList(path);
             printToExpeditionCounter();
+            announcement.InfoLogger("Program çalıştırıldı!");
+
+            id = GetIdFromFile(Desktoppath + "\\id.txt");
+            Count = ExpeditionCount(Desktoppath + "\\count.txt");
+            
         }    
         private void createListView()
         {
@@ -55,10 +65,9 @@ namespace Kocaeli_Travel_App
             armchairListView.Columns.Add("State");
             armchairListView.Columns.Add("Price");
         }
-        public static int expeditionCounter = 0;
+       
         public void printToExpeditionCounter()
         {
-          
             Node<Expedition> current = myList._head;
             while (current != null)
             {
@@ -137,6 +146,35 @@ namespace Kocaeli_Travel_App
             }
 
             printToExpeditionListView();
+        }
+        public int GetIdFromFile(string path)
+        {
+            
+          
+            if (!File.Exists(path))
+            {
+                using (File.CreateText(path))
+                {
+                    return 1;
+                }
+            }
+            string[] readText = File.ReadAllLines(path, Encoding.UTF8);
+
+            return int.Parse(readText[0]);
+        }
+
+        public int ExpeditionCount(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (File.CreateText(path))
+                {
+                    return 0;
+                }
+            }
+            string[] readText = File.ReadAllLines(path, Encoding.UTF8);
+
+            return int.Parse(readText[0]);
         }
         public void printToTxtFile()
         {
@@ -259,14 +297,12 @@ namespace Kocaeli_Travel_App
             }
             return currentAr;
         }
-        public static int lastline;
-        public static int sefercount;
         private void add(object sender, EventArgs e)
         {
             try
             {
-                 sefercount = expeditionListView.Items.Count;
-                lastline = int.Parse(expeditionListView.Items[sefercount - 1].SubItems[0].Text) + 1;
+               //  sefercount = expeditionListView.Items.Count;
+                // lastline = int.Parse(expeditionListView.Items[sefercount - 1].SubItems[0].Text) + 1;
                 announcement.InfoLogger("Sefer Ekleme sayfasına gidildi");
 
                 AddExpedition addExpedition = new AddExpedition();
@@ -340,12 +376,7 @@ namespace Kocaeli_Travel_App
                 }
             }
             //Todo Ekle, id yi kendisi versin
-           
-             
-               
-            
-           
-            
+      
         }
         private void delete(object sender, EventArgs e)
         {
@@ -389,6 +420,7 @@ namespace Kocaeli_Travel_App
                 printToExpeditionListView();
              //   printToExpeditionCounter();
                 announcement.InfoLogger("Sefer Silindi");
+                Count--;
             }
             else
             {
@@ -420,6 +452,7 @@ namespace Kocaeli_Travel_App
             else
             {
                 MessageBox.Show("Kaptan değiştirmek istediğiniz seferi seçiniz!");
+                announcement.WarnLogger("Kullanıcı sefer seçmeden kaptan değiştirmek istedi!");
             }
         }
            
@@ -452,6 +485,7 @@ namespace Kocaeli_Travel_App
                 else
             {
                 MessageBox.Show("Lütfen geliri hesapşlanacak bir sefer seçiniz!");
+                announcement.WarnLogger("Kullanıcı geliri hesaplanacak bir sefer seçmedi!");
             }
 
         }
@@ -556,6 +590,13 @@ namespace Kocaeli_Travel_App
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string Desktoppath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            File.WriteAllText(Desktoppath + "\\id.txt", id.ToString());
+            File.WriteAllText(Desktoppath + "\\count.txt", Count.ToString());
         }
     }
 }
