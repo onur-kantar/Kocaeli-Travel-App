@@ -1,0 +1,22 @@
+2020-04-10 22:27:14.8595 INFO Program çalýþtýrýldý!
+2020-04-10 22:27:18.8821 INFO Sefer Ekleme sayfasýna gidildi
+2020-04-10 22:27:18.9519 INFO Sefer ekleme sayfasý açýldý
+2020-04-10 22:27:42.7452 INFO Kullanýcý sefer oluþturdu!
+2020-04-10 22:27:52.3357 INFO Bilet Satýn Alýndý!
+2020-04-10 22:27:52.3586 INFO Kullanýcý bilet satýn alma iþlemini tamamladý!
+2020-04-10 22:27:58.2422 INFO Gelir hesaplandý!
+2020-04-10 22:28:00.5473 INFO Gelir hesaplandý!
+2020-04-10 22:28:12.3595 INFO Bilet Satýn Alýndý!
+2020-04-10 22:28:12.3814 INFO Kullanýcý bilet satýn alma iþlemini tamamladý!
+2020-04-10 22:28:14.9961 INFO Gelir hesaplandý!
+2020-04-10 22:28:17.2880 INFO Kaptan Deðiþtirme Sayfasýna Gidildi
+2020-04-10 22:28:18.5431 INFO Kaptan deðiþtirildi!
+2020-04-10 22:28:21.1593 INFO Kaptan Deðiþtirme Sayfasýna Gidildi
+2020-04-10 22:28:24.5297 INFO Kaptan deðiþtirildi!
+2020-04-10 22:28:26.4898 WARN Kullanýcý bilet satýlmýþ bir seferi silmek istedi!
+2020-04-10 22:28:34.5585 WARN Kullanýcý boþ koltuða bilet almaya çalýþtý!
+2020-04-10 22:28:37.2677 WARN Kullanýcý boþ koltuða bilet almaya çalýþtý!
+2020-04-10 22:28:38.9233 INFO Kullanýcý bileti iptal etti!
+2020-04-10 22:28:54.7909 INFO Bilet Satýn Alýndý!
+2020-04-10 22:28:54.8139 INFO Kullanýcý bilet satýn alma iþlemini tamamladý!
+2020-04-10 22:28:59.0998 WARN Kullanýcý dolu koltuða bilet almaya çalýþtý!

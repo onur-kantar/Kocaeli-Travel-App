@@ -28,3 +28,9 @@ C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug
 C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\log4net.xml
 C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\NLog.xml
 C:\Users\furkan\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.csproj.CopyComplete
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\NLog.config
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\log4net.dll
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\NLog.dll
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\log4net.xml
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\bin\Debug\NLog.xml
+C:\Users\onurk\Documents\GitHub\Kocaeli-Travel-App\Kocaeli-Travel-App\obj\Debug\Kocaeli-Travel-App.csproj.CopyComplete
