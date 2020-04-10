@@ -12,6 +12,7 @@ namespace Kocaeli_Travel_App
 {
     public partial class CaptainChange : Form
     {
+        Commander announcement = new Commander();
         public string changeName;
         public CaptainChange()
         {
@@ -24,6 +25,12 @@ namespace Kocaeli_Travel_App
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+            announcement.InfoLogger("Kaptan değiştirildi!");
+        }
+
+        private void CaptainChange_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

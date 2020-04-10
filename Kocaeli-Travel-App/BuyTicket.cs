@@ -12,6 +12,7 @@ namespace Kocaeli_Travel_App
 {
     public partial class BuyTicket : Form
     {
+        Commander announcement = new Commander();
         public Data data;
         public BuyTicket()
         {
@@ -23,15 +24,43 @@ namespace Kocaeli_Travel_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            data = new Data(
-                name.Text,
-                gender.Text,
-                (stateComboBox.SelectedItem as ComboboxItem).Value.ToString()
-                );
-                
+            if (name.Text!="" && gender.SelectedItem!=null && stateComboBox.SelectedItem!=null)
+            {
+                data = new Data(
+              name.Text,
+              gender.Text,
+              (stateComboBox.SelectedItem as ComboboxItem).Value.ToString()
+              );
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                announcement.InfoLogger("Bilet Satın Alındı!");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
+                announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan bilet satın almaya çalıştı!");
+            }
+              
+       
+    }
+       
+            
+
+        private void BuyTicket_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gender2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
         }
     }
     public class ComboboxItem
@@ -47,13 +76,13 @@ namespace Kocaeli_Travel_App
     public class Data
     {
         public string Name { get; set; }
-        public string Gender { get; set; }
+        public string Gender2 { get; set; }
         public string State { get; set; }
 
         public Data(string Name, string Gender, string State)
         {
             this.Name = Name;
-            this.Gender = Gender;
+            this.Gender2 = Gender;
             this.State = State;
         }
     }
