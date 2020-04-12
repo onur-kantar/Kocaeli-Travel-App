@@ -13,22 +13,18 @@ using System.Diagnostics;
 
 namespace Kocaeli_Travel_App
 {
-  
-
     public partial class Form1 : Form
     {
-   
-        Commander announcement = new Commander();    
+        Commander announcement = new Commander();
         MyList<Expedition> myList;
         string path;
-        
+
         public Form1()
-        {      
-        InitializeComponent();        
-         }
+        {
+            InitializeComponent();
+        }
         public static int expeditionCounter = 0;
-     //   public static int lastline;
-       // public static int sefercount;
+
         public static int id = 0;
         public static int Count;
         private void Form1_Load(object sender, EventArgs e)
@@ -36,18 +32,21 @@ namespace Kocaeli_Travel_App
             //Todo / .
             //Todo pc'den pc'ye değişme olayı 
 
-            string Desktoppath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);        
-            string date = DateTime.Now.ToString("dd.MM.yyyy");      
+            string Desktoppath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string date = DateTime.Now.ToString("dd.MM.yyyy");
             path = Desktoppath + "\\" + date + ".txt";
+
             createListView();
             printToMyList(path);
             printToExpeditionCounter();
-            announcement.InfoLogger("Program çalıştırıldı!");
 
             id = GetIdFromFile(Desktoppath + "\\id.txt");
             Count = ExpeditionCount(Desktoppath + "\\count.txt");
-            
-        }    
+
+            announcement.InfoLogger("Program çalıştırıldı!");
+
+        }
+
         private void createListView()
         {
             expeditionListView.Columns.Add("Id");
@@ -65,7 +64,33 @@ namespace Kocaeli_Travel_App
             armchairListView.Columns.Add("State");
             armchairListView.Columns.Add("Price");
         }
-       
+        public int GetIdFromFile(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (File.CreateText(path))
+                {
+                    return 1;
+                }
+            }
+            string[] readText = File.ReadAllLines(path, Encoding.UTF8);
+
+            return int.Parse(readText[0]);
+        }
+        public int ExpeditionCount(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (File.CreateText(path))
+                {
+                    return 0;
+                }
+            }
+            string[] readText = File.ReadAllLines(path, Encoding.UTF8);
+
+            return int.Parse(readText[0]);
+        }
+
         public void printToExpeditionCounter()
         {
             Node<Expedition> current = myList._head;
@@ -74,7 +99,7 @@ namespace Kocaeli_Travel_App
                 current = current.Next;
                 expeditionCounter++;
             }
-            ExpeditionCounter.Text = expeditionCounter.ToString();       
+            ExpeditionCounter.Text = expeditionCounter.ToString();
         }
         public void printToMyList(string path)
         {
@@ -147,35 +172,6 @@ namespace Kocaeli_Travel_App
 
             printToExpeditionListView();
         }
-        public int GetIdFromFile(string path)
-        {
-            
-          
-            if (!File.Exists(path))
-            {
-                using (File.CreateText(path))
-                {
-                    return 1;
-                }
-            }
-            string[] readText = File.ReadAllLines(path, Encoding.UTF8);
-
-            return int.Parse(readText[0]);
-        }
-
-        public int ExpeditionCount(string path)
-        {
-            if (!File.Exists(path))
-            {
-                using (File.CreateText(path))
-                {
-                    return 0;
-                }
-            }
-            string[] readText = File.ReadAllLines(path, Encoding.UTF8);
-
-            return int.Parse(readText[0]);
-        }
         public void printToTxtFile()
         {
             Node<Expedition> currentEx = myList._head;
@@ -246,7 +242,7 @@ namespace Kocaeli_Travel_App
                     current = current.Next;
                 }
             }
-        } 
+        }
         public void printToArmchairListView(string id)
         {
             ListViewItem listViewItem;
@@ -297,92 +293,49 @@ namespace Kocaeli_Travel_App
             }
             return currentAr;
         }
+
         private void add(object sender, EventArgs e)
         {
-            try
+            announcement.InfoLogger("Sefer Ekleme sayfasına gidildi");
+
+            AddExpedition addExpedition = new AddExpedition();
+            addExpedition.ShowDialog();
+            if (addExpedition.DialogResult == DialogResult.OK)
             {
-               //  sefercount = expeditionListView.Items.Count;
-                // lastline = int.Parse(expeditionListView.Items[sefercount - 1].SubItems[0].Text) + 1;
-                announcement.InfoLogger("Sefer Ekleme sayfasına gidildi");
+                myList.myAdd(addExpedition.expedition);
 
-                AddExpedition addExpedition = new AddExpedition();
-                addExpedition.ShowDialog();
-                if (addExpedition.DialogResult == DialogResult.OK)
+                List<string> addNew = new List<string>();
+                addNew.Add(addExpedition.expedition.Id);
+                addNew.Add(addExpedition.expedition.Road);
+                addNew.Add(addExpedition.expedition.Date);
+                addNew.Add(addExpedition.expedition.Time);
+                addNew.Add(addExpedition.expedition.Capacity);
+                addNew.Add(addExpedition.expedition.Price);
+                addNew.Add(addExpedition.expedition.LicencePlate);
+                addNew.Add(addExpedition.expedition.Captain);
+                addNew.Add("");
+
+                Node<Armchair> current = addExpedition.expedition.Armchairs._head;
+                string textArmchair;
+                while (current != null)
                 {
-                    myList.myAdd(addExpedition.expedition);
-
-                    List<string> addNew = new List<string>();
-                    addNew.Add(addExpedition.expedition.Id);
-                    addNew.Add(addExpedition.expedition.Road);
-                    addNew.Add(addExpedition.expedition.Date);
-                    addNew.Add(addExpedition.expedition.Time);
-                    addNew.Add(addExpedition.expedition.Capacity);
-                    addNew.Add(addExpedition.expedition.Price);
-                    addNew.Add(addExpedition.expedition.LicencePlate);
-                    addNew.Add(addExpedition.expedition.Captain);
-                    addNew.Add("");
-
-                    Node<Armchair> current = addExpedition.expedition.Armchairs._head;
-                    string textArmchair;
-                    while (current != null)
-                    {
-                        textArmchair = current.Data.Id + " " + current.Data.Name + " " + current.Data.Gender + " " + current.Data.State + " " + current.Data.Price;
-                        addNew.Add(textArmchair);
-                        current = current.Next;
-                    }
-                    addNew.Add("");
-
-                    File.AppendAllLines(path, addNew);
-                    printToExpeditionListView();
-                    expeditionCounter++;
-                    ExpeditionCounter.Text = expeditionCounter.ToString();
+                    textArmchair = current.Data.Id + " " + current.Data.Name + " " + current.Data.Gender + " " + current.Data.State + " " + current.Data.Price;
+                    addNew.Add(textArmchair);
+                    current = current.Next;
                 }
+                addNew.Add("");
+
+                File.AppendAllLines(path, addNew);
+                printToExpeditionListView();
+                Count++;
+                id++;
+                expeditionCounter++;
+                ExpeditionCounter.Text = expeditionCounter.ToString();
             }
-            catch
-            {
-                announcement.InfoLogger("Sefer Ekleme sayfasına gidildi");
-
-                AddExpedition addExpedition = new AddExpedition();
-                addExpedition.ShowDialog();
-                if (addExpedition.DialogResult == DialogResult.OK)
-                {
-                    myList.myAdd(addExpedition.expedition);
-
-                    List<string> addNew = new List<string>();
-                    addNew.Add(addExpedition.expedition.Id);
-                    addNew.Add(addExpedition.expedition.Road);
-                    addNew.Add(addExpedition.expedition.Date);
-                    addNew.Add(addExpedition.expedition.Time);
-                    addNew.Add(addExpedition.expedition.Capacity);
-                    addNew.Add(addExpedition.expedition.Price);
-                    addNew.Add(addExpedition.expedition.LicencePlate);
-                    addNew.Add(addExpedition.expedition.Captain);
-                    addNew.Add("");
-
-                    Node<Armchair> current = addExpedition.expedition.Armchairs._head;
-                    string textArmchair;
-                    while (current != null)
-                    {
-                        textArmchair = current.Data.Id + " " + current.Data.Name + " " + current.Data.Gender + " " + current.Data.State + " " + current.Data.Price;
-                        addNew.Add(textArmchair);
-                        current = current.Next;
-                    }
-                    addNew.Add("");
-
-                    File.AppendAllLines(path, addNew);
-                    printToExpeditionListView();
-                    expeditionCounter++;
-                    ExpeditionCounter.Text = expeditionCounter.ToString();
-                }
-            }
-            //Todo Ekle, id yi kendisi versin
-      
         }
         private void delete(object sender, EventArgs e)
         {
-          
-            //Todo sil
-            if (expeditionListView.SelectedItems.Count > 0 && expeditionListView.SelectedItems.Count < 2)
+            if (expeditionListView.SelectedItems.Count == 1)
             {
                 string id = expeditionListView.SelectedItems[0].Text;
                 Node<Armchair> currentAr;
@@ -392,7 +345,7 @@ namespace Kocaeli_Travel_App
                 currentAr = current.Data.Armchairs._head;
                 while (currentAr != null)
                 {
-                    if (currentAr.Data.State != "Boş")
+                    if (currentAr.Data.State == "Dolu")
                     {
                         announcement.WarnLogger("Kullanıcı bilet satılmış bir seferi silmek istedi!");
                         MessageBox.Show("Sefer Satılmış Koltuk İçeriyor", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -418,19 +371,22 @@ namespace Kocaeli_Travel_App
                 printToTxtFile();
                 printToMyList(path);
                 printToExpeditionListView();
-             //   printToExpeditionCounter();
+                //   printToExpeditionCounter();
                 announcement.InfoLogger("Sefer Silindi");
                 Count--;
+                expeditionCounter--;
+                ExpeditionCounter.Text = expeditionCounter.ToString();
+
             }
             else
             {
                 MessageBox.Show("Lütfen silinecek olan seferi seçiniz!");
                 announcement.WarnLogger("Kullanıcı herhangi bir sefer seçimi yapmadan,sefer silme işlemi yapmak istedi!");
-            }        
+            }
         }
         private void captainChange(object sender, EventArgs e)
         {
-            if(expeditionListView.SelectedItems.Count>0 && expeditionListView.SelectedItems.Count < 2)
+            if (expeditionListView.SelectedItems.Count == 1)
             {
                 announcement.InfoLogger("Kaptan Değiştirme Sayfasına Gidildi");
                 //Todo kaptan değiştir
@@ -455,11 +411,10 @@ namespace Kocaeli_Travel_App
                 announcement.WarnLogger("Kullanıcı sefer seçmeden kaptan değiştirmek istedi!");
             }
         }
-           
         private void calculateIncome(object sender, EventArgs e)
         {
             //Todo gelir hesapla
-          if(expeditionListView.SelectedItems.Count>0)
+            if (expeditionListView.SelectedItems.Count == 1)
             {
                 string id = expeditionListView.SelectedItems[0].Text;
                 Node<Expedition> currentEx = myList._head;
@@ -481,8 +436,8 @@ namespace Kocaeli_Travel_App
                 MessageBox.Show(sum.ToString() + " TL", "Toplam Gelir", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 announcement.InfoLogger("Gelir hesaplandı!");
             }
-             
-                else
+
+            else
             {
                 MessageBox.Show("Lütfen geliri hesapşlanacak bir sefer seçiniz!");
                 announcement.WarnLogger("Kullanıcı geliri hesaplanacak bir sefer seçmedi!");
@@ -501,13 +456,13 @@ namespace Kocaeli_Travel_App
         }
         private void ticketBuy(object sender, EventArgs e)
         {
-          
+
             //Todo Bilet Satın Al
-            if (armchairListView.SelectedItems.Count > 0 && expeditionListView.SelectedItems.Count>0 && expeditionListView.SelectedItems.Count<2 && armchairListView.SelectedItems.Count < 2)
-            { 
-                if (armchairListView.SelectedItems[0].SubItems[3].Text!="Dolu")
+            if (armchairListView.SelectedItems.Count == 1 && expeditionListView.SelectedItems.Count == 1)
+            {
+                if (armchairListView.SelectedItems[0].SubItems[3].Text != "Dolu")
                 {
-                  //  Node<Armchair> current = findArmchairWithSelectedId(findExpeditionWithSelectedId());
+                    //  Node<Armchair> current = findArmchairWithSelectedId(findExpeditionWithSelectedId());
                     string id = expeditionListView.SelectedItems[0].Text;
                     BuyTicket buyTicket = new BuyTicket();
                     buyTicket.ShowDialog();
@@ -515,11 +470,11 @@ namespace Kocaeli_Travel_App
                     {
                         Node<Armchair> current = findArmchair(findExpedition(id));
                         current.Data.Name = buyTicket.data.Name;
-                        current.Data.Gender = buyTicket.data.Gender2;
+                        current.Data.Gender = buyTicket.data.Gender;
                         current.Data.State = buyTicket.data.State;
 
                         current.Data.Name = buyTicket.data.Name;
-                        current.Data.Gender = buyTicket.data.Gender2;
+                        current.Data.Gender = buyTicket.data.Gender;
                         current.Data.State = buyTicket.data.State;
 
                         printToTxtFile();
@@ -527,30 +482,30 @@ namespace Kocaeli_Travel_App
 
                         printToTxtFile();
                         printToMyList(path);
-                        announcement.InfoLogger("Kullanıcı bilet satın alma işlemini tamamladı!");    
+                        announcement.InfoLogger("Kullanıcı bilet satın alma işlemini tamamladı!");
                     }
                 }
                 else
                 {
                     MessageBox.Show("Lütfen boş bir koltuk seçiniz!");
-                     announcement.WarnLogger("Kullanıcı dolu koltuğa bilet almaya çalıştı!");       
+                    announcement.WarnLogger("Kullanıcı dolu koltuğa bilet almaya çalıştı!");
                 }
             }
-                   
+
             else
-                {
-                    MessageBox.Show("Lütfen sefer ve koltuk seçiniz!");
-                    announcement.WarnLogger("Kullanıcı sefer ve koltuk seçmeden işlem yapmaya çalıştı!");
-                }
-            
-                
+            {
+                MessageBox.Show("Lütfen sefer ve koltuk seçiniz!");
+                announcement.WarnLogger("Kullanıcı sefer ve koltuk seçmeden işlem yapmaya çalıştı!");
+            }
+
+
         }
         private void ticketCancel(object sender, EventArgs e)
         {
             //Todo Bilet İptal
-            if (armchairListView.SelectedItems.Count > 0 && expeditionListView.SelectedItems.Count > 0 && expeditionListView.SelectedItems.Count < 2 && armchairListView.SelectedItems.Count < 2)
+            if (armchairListView.SelectedItems.Count ==1  && expeditionListView.SelectedItems.Count == 1)
             {
-              
+
                 if (armchairListView.SelectedItems[0].SubItems[3].Text == "Dolu")
                 {
                     string id = expeditionListView.SelectedItems[0].Text;
@@ -567,31 +522,20 @@ namespace Kocaeli_Travel_App
                 {
                     MessageBox.Show("Koltuk zaten boş!");
                     announcement.WarnLogger("Kullanıcı boş koltuğa bilet almaya çalıştı!");
-                }  
+                }
             }
             else
             {
                 MessageBox.Show("Lütfen silinecek olan seferi ve koltuğu seçiniz!");
                 announcement.WarnLogger("Kullanıcı koltuk ve sefer seçimi yapmadan bilet iptal etmeye çalıştı!");
             }
-               
+
         }
 
         private void expeditionListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             printToArmchairListView(e.Item.Text);
         }
-
-        public void expeditionListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             string Desktoppath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);

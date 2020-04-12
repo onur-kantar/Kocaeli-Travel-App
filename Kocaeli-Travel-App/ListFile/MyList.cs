@@ -1,33 +1,33 @@
 ﻿namespace Kocaeli_Travel_App
 {
-    class Commander
-    {
+    //class Commander
+    //{
 
-        NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+    //    NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
        
-        public void InfoLogger (string text)
-        {
-            logger.Info(text);         
-        }
-        public void FatalErrorLogger(string text)
-        {
-            logger.Fatal(text);
-            logger.Error(text);
-        }
-        public void WarnLogger(string text)
-        {
-            logger.Warn(text);      
-        }
-        public void DebugLogger(string text)
-        {
-            logger.Debug(text);
-        }
-        public void TraceLogger(string text)
-        {
-            logger.Trace(text);
-        }
-    }
+    //    public void InfoLogger (string text)
+    //    {
+    //        logger.Info(text);         
+    //    }
+    //    public void FatalErrorLogger(string text)
+    //    {
+    //        logger.Fatal(text);
+    //        logger.Error(text);
+    //    }
+    //    public void WarnLogger(string text)
+    //    {
+    //        logger.Warn(text);      
+    //    }
+    //    public void DebugLogger(string text)
+    //    {
+    //        logger.Debug(text);
+    //    }
+    //    public void TraceLogger(string text)
+    //    {
+    //        logger.Trace(text);
+    //    }
+    //}
     public class MyList<T>
     {
 

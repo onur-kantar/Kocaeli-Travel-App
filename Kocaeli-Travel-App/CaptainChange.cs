@@ -21,16 +21,19 @@ namespace Kocaeli_Travel_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            changeName = textBox1.Text;
+            if (captain.Text != "")
+            {
+                changeName = captain.Text;
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-            announcement.InfoLogger("Kaptan değiştirildi!");
-        }
-
-        private void CaptainChange_Load(object sender, EventArgs e)
-        {
-
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                announcement.InfoLogger("Kaptan değiştirildi!");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen tüm bilgileri doğru bir şekilde doldurunuz!");
+                announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan sefer eklemek istedi!");
+            }
         }
     }
 }

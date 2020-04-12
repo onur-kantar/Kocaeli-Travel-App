@@ -12,33 +12,28 @@ namespace Kocaeli_Travel_App
 {
     public partial class AddExpedition : Form
     {
-       
         public Expedition expedition;
-      //  public static int x = 1;
-
         Commander announcement = new Commander();
-
         public AddExpedition()
         {
             InitializeComponent();
-        }
 
+            id.Text = (Form1.id + 1).ToString();
+            announcement.InfoLogger("Sefer ekleme sayfası açıldı");
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            //Todo Sefer ekle
-
-            if (road.SelectedItem!=null && capacity.Text!="" && time.Text!="" && price.Text!="" && licancePlate.Text!="" && captain.Text!="")
+            if (road.SelectedItem != null && capacity.Text != "" && time.Text != "" && price.Text != "" && licancePlate.Text != "" && captain.Text != "")
             {
                 expedition = new Expedition(
-              id.Text,
-              road.Text,
-
-             date.Text.ToString(),
-              time.Text,
-              capacity.Text,
-              price.Text,
-              licancePlate.Text,
-              captain.Text
+                id.Text,
+                road.Text,
+                date.Text.ToString(),
+                time.Text,
+                capacity.Text,
+                price.Text,
+                licancePlate.Text,
+                captain.Text
               );
 
                 for (int i = 0; i < int.Parse(capacity.Text); i++)
@@ -48,57 +43,14 @@ namespace Kocaeli_Travel_App
                 this.DialogResult = DialogResult.OK;
                 this.Close();
                 announcement.InfoLogger("Kullanıcı sefer oluşturdu!");
-                Form1.id++;
-                Form1.Count++; 
+                //Form1.id++;
+                //Form1.Count++;
             }
             else
             {
                 MessageBox.Show("Lütfen tüm bilgileri doğru bir şekilde doldurunuz!");
                 announcement.WarnLogger("Kullanıcı tüm bilgileri doldurmadan sefer eklemek istedi!");
-            }       
-        }
-        public static int number;
-        private void AddExpedition_Load(object sender, EventArgs e)
-         {
-            id.Text = (Form1.id + 1).ToString();
-            announcement.InfoLogger("Sefer ekleme sayfası açıldı");
-        }
-        private void price_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void capacity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void captain_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
-                        && !char.IsSeparator(e.KeyChar);
-        }
-        private void date2_ValueChanged(object sender, EventArgs e)
-        {
-        }
-        private void time_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void road_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void captain_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void licancePlate_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
+            }
         }
     }
 }

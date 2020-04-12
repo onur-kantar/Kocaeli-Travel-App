@@ -47,23 +47,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(471, 61);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(628, 75);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 14;
             this.label5.Text = "Tüm Sefer Sayısı :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // armchairListView
             // 
             this.armchairListView.FullRowSelect = true;
             this.armchairListView.GridLines = true;
             this.armchairListView.HideSelection = false;
-            this.armchairListView.Location = new System.Drawing.Point(8, 224);
-            this.armchairListView.Margin = new System.Windows.Forms.Padding(2);
+            this.armchairListView.Location = new System.Drawing.Point(11, 276);
+            this.armchairListView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.armchairListView.Name = "armchairListView";
-            this.armchairListView.Size = new System.Drawing.Size(603, 129);
+            this.armchairListView.Size = new System.Drawing.Size(803, 158);
             this.armchairListView.TabIndex = 13;
             this.armchairListView.UseCompatibleStateImageBehavior = false;
             this.armchairListView.View = System.Windows.Forms.View.Details;
@@ -73,43 +71,40 @@
             this.expeditionListView.FullRowSelect = true;
             this.expeditionListView.GridLines = true;
             this.expeditionListView.HideSelection = false;
-            this.expeditionListView.Location = new System.Drawing.Point(9, 77);
-            this.expeditionListView.Margin = new System.Windows.Forms.Padding(2);
+            this.expeditionListView.Location = new System.Drawing.Point(12, 95);
+            this.expeditionListView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.expeditionListView.Name = "expeditionListView";
-            this.expeditionListView.Size = new System.Drawing.Size(603, 129);
+            this.expeditionListView.Size = new System.Drawing.Size(803, 158);
             this.expeditionListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.expeditionListView.TabIndex = 12;
             this.expeditionListView.UseCompatibleStateImageBehavior = false;
             this.expeditionListView.View = System.Windows.Forms.View.Details;
             this.expeditionListView.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.expeditionListView_ItemSelectionChanged);
-            this.expeditionListView.SelectedIndexChanged += new System.EventHandler(this.expeditionListView_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(9, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seferler";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 208);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(11, 256);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Koltuklar";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(252, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(336, 12);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 41);
+            this.button5.Size = new System.Drawing.Size(75, 50);
             this.button5.TabIndex = 9;
             this.button5.Text = " Gün Seç";
             this.button5.UseVisualStyleBackColor = true;
@@ -117,10 +112,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(191, 10);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(255, 12);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 41);
+            this.button4.Size = new System.Drawing.Size(75, 50);
             this.button4.TabIndex = 8;
             this.button4.Text = "Gelir Hesapla";
             this.button4.UseVisualStyleBackColor = true;
@@ -128,10 +123,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(130, 10);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(173, 12);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 41);
+            this.button3.Size = new System.Drawing.Size(75, 50);
             this.button3.TabIndex = 7;
             this.button3.Text = "Kaptan Değiştir";
             this.button3.UseVisualStyleBackColor = true;
@@ -139,10 +134,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(70, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(93, 12);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 41);
+            this.button2.Size = new System.Drawing.Size(75, 50);
             this.button2.TabIndex = 6;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = true;
@@ -150,10 +145,10 @@
             // 
             // asdasd
             // 
-            this.asdasd.Location = new System.Drawing.Point(9, 10);
-            this.asdasd.Margin = new System.Windows.Forms.Padding(2);
+            this.asdasd.Location = new System.Drawing.Point(12, 12);
+            this.asdasd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.asdasd.Name = "asdasd";
-            this.asdasd.Size = new System.Drawing.Size(56, 41);
+            this.asdasd.Size = new System.Drawing.Size(75, 50);
             this.asdasd.TabIndex = 5;
             this.asdasd.Text = "Ekle";
             this.asdasd.UseVisualStyleBackColor = true;
@@ -161,10 +156,10 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(374, 10);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Location = new System.Drawing.Point(499, 12);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(56, 41);
+            this.button7.Size = new System.Drawing.Size(75, 50);
             this.button7.TabIndex = 19;
             this.button7.Text = "Satış İptal";
             this.button7.UseVisualStyleBackColor = true;
@@ -172,10 +167,10 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(313, 10);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Location = new System.Drawing.Point(417, 12);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 41);
+            this.button6.Size = new System.Drawing.Size(75, 50);
             this.button6.TabIndex = 14;
             this.button6.Text = "Satın Al";
             this.button6.UseVisualStyleBackColor = true;
@@ -188,18 +183,17 @@
             // ExpeditionCounter
             // 
             this.ExpeditionCounter.AutoSize = true;
-            this.ExpeditionCounter.Location = new System.Drawing.Point(568, 61);
-            this.ExpeditionCounter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ExpeditionCounter.Location = new System.Drawing.Point(757, 75);
             this.ExpeditionCounter.Name = "ExpeditionCounter";
-            this.ExpeditionCounter.Size = new System.Drawing.Size(13, 13);
+            this.ExpeditionCounter.Size = new System.Drawing.Size(16, 17);
             this.ExpeditionCounter.TabIndex = 15;
             this.ExpeditionCounter.Text = "0";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 360);
+            this.ClientSize = new System.Drawing.Size(824, 443);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.ExpeditionCounter);
             this.Controls.Add(this.label5);
@@ -213,7 +207,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button5);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Kocaeli Travel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

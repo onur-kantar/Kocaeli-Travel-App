@@ -39,20 +39,19 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(73, 36);
-            this.name.Margin = new System.Windows.Forms.Padding(2);
+            this.name.Location = new System.Drawing.Point(97, 44);
+            this.name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(76, 20);
+            this.name.Size = new System.Drawing.Size(102, 22);
             this.name.TabIndex = 0;
-            this.name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_KeyPress);
             // 
             // ByTicket
             // 
-            this.ByTicket.Location = new System.Drawing.Point(73, 155);
-            this.ByTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.ByTicket.Location = new System.Drawing.Point(97, 191);
+            this.ByTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ByTicket.Name = "ByTicket";
-            this.ByTicket.Size = new System.Drawing.Size(56, 41);
-            this.ByTicket.TabIndex = 4;
+            this.ByTicket.Size = new System.Drawing.Size(75, 50);
+            this.ByTicket.TabIndex = 3;
             this.ByTicket.Text = "Satın Al";
             this.ByTicket.UseVisualStyleBackColor = true;
             this.ByTicket.Click += new System.EventHandler(this.button1_Click);
@@ -60,39 +59,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(59, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.Size = new System.Drawing.Size(32, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "İsim";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(35, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Cinsiyet";
             // 
             // stateComboBox
             // 
             this.stateComboBox.FormattingEnabled = true;
-            this.stateComboBox.Location = new System.Drawing.Point(73, 101);
-            this.stateComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.stateComboBox.Location = new System.Drawing.Point(97, 124);
+            this.stateComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stateComboBox.Name = "stateComboBox";
-            this.stateComboBox.Size = new System.Drawing.Size(76, 21);
-            this.stateComboBox.TabIndex = 7;
+            this.stateComboBox.Size = new System.Drawing.Size(102, 24);
+            this.stateComboBox.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 103);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(41, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Durum";
             // 
@@ -102,17 +98,17 @@
             this.gender.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.gender.Location = new System.Drawing.Point(74, 71);
+            this.gender.Location = new System.Drawing.Point(99, 87);
+            this.gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(76, 21);
-            this.gender.TabIndex = 20;
-            this.gender.SelectedIndexChanged += new System.EventHandler(this.gender2_SelectedIndexChanged);
+            this.gender.Size = new System.Drawing.Size(100, 24);
+            this.gender.TabIndex = 1;
             // 
             // BuyTicket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 206);
+            this.ClientSize = new System.Drawing.Size(283, 254);
             this.Controls.Add(this.gender);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.stateComboBox);
@@ -120,10 +116,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ByTicket);
             this.Controls.Add(this.name);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BuyTicket";
             this.Text = "BuyTicket";
-            this.Load += new System.EventHandler(this.BuyTicket_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
