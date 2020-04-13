@@ -54,6 +54,7 @@
             this.capacity.Name = "capacity";
             this.capacity.Size = new System.Drawing.Size(128, 22);
             this.capacity.TabIndex = 4;
+            this.capacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.capacity_KeyPress);
             // 
             // price
             // 
@@ -62,6 +63,7 @@
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(128, 22);
             this.price.TabIndex = 5;
+            this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
             // 
             // label1
             // 
@@ -157,6 +159,7 @@
             // 
             // road
             // 
+            this.road.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.road.FormattingEnabled = true;
             this.road.Items.AddRange(new object[] {
             "Kocaeli-Ankara",
@@ -166,7 +169,7 @@
             "İstanbul-Kocaeli",
             "İzmir-Kocaeli"});
             this.road.Location = new System.Drawing.Point(99, 44);
-            this.road.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.road.Margin = new System.Windows.Forms.Padding(4);
             this.road.Name = "road";
             this.road.Size = new System.Drawing.Size(128, 24);
             this.road.TabIndex = 1;
@@ -174,7 +177,7 @@
             // date
             // 
             this.date.Location = new System.Drawing.Point(99, 71);
-            this.date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.date.Margin = new System.Windows.Forms.Padding(4);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(128, 22);
             this.date.TabIndex = 2;
@@ -186,9 +189,11 @@
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(128, 22);
             this.time.TabIndex = 3;
+            this.time.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.time_KeyPress);
             // 
             // captain
             // 
+            this.captain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.captain.FormattingEnabled = true;
             this.captain.Items.AddRange(new object[] {
             "Ramazan Furkan Çınar",
@@ -196,19 +201,20 @@
             "Lütfü Sevinç",
             "Mert Yakar"});
             this.captain.Location = new System.Drawing.Point(99, 213);
-            this.captain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.captain.Margin = new System.Windows.Forms.Padding(4);
             this.captain.Name = "captain";
             this.captain.Size = new System.Drawing.Size(128, 24);
             this.captain.TabIndex = 7;
             // 
             // licancePlate
             // 
+            this.licancePlate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.licancePlate.FormattingEnabled = true;
             this.licancePlate.Items.AddRange(new object[] {
             "41 BSM 3441",
             "41 ISE 9898"});
             this.licancePlate.Location = new System.Drawing.Point(99, 185);
-            this.licancePlate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.licancePlate.Margin = new System.Windows.Forms.Padding(4);
             this.licancePlate.Name = "licancePlate";
             this.licancePlate.Size = new System.Drawing.Size(128, 24);
             this.licancePlate.TabIndex = 6;

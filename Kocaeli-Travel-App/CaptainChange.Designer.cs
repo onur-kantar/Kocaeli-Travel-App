@@ -55,6 +55,7 @@
             // 
             // captain
             // 
+            this.captain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.captain.FormattingEnabled = true;
             this.captain.Items.AddRange(new object[] {
             "Ramazan Furkan Çınar",

@@ -66,5 +66,10 @@ namespace Kocaeli_Travel_App
                 this.State = State;
             }
         }
+
+        private void name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);
+        }
     }
 }

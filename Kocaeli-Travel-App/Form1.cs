@@ -449,10 +449,13 @@ namespace Kocaeli_Travel_App
             //Todo dosya seç
             openFileDialog1.Filter = "Text Dosyası |*.txt";
             openFileDialog1.Title = "Sefer Seç";
-            openFileDialog1.ShowDialog();
-            path = openFileDialog1.FileName;
-            printToMyList(path);
-            printToExpeditionListView();
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                path = openFileDialog1.FileName;
+                printToMyList(path);
+                printToExpeditionListView();
+            }
+
         }
         private void ticketBuy(object sender, EventArgs e)
         {

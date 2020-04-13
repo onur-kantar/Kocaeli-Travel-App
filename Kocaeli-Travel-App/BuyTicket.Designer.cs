@@ -39,11 +39,12 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(97, 44);
+            this.name.Location = new System.Drawing.Point(97, 47);
             this.name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(102, 22);
             this.name.TabIndex = 0;
+            this.name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_KeyPress);
             // 
             // ByTicket
             // 
@@ -76,6 +77,7 @@
             // 
             // stateComboBox
             // 
+            this.stateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.stateComboBox.FormattingEnabled = true;
             this.stateComboBox.Location = new System.Drawing.Point(97, 124);
             this.stateComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -94,14 +96,15 @@
             // 
             // gender
             // 
+            this.gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gender.FormattingEnabled = true;
             this.gender.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.gender.Location = new System.Drawing.Point(99, 87);
-            this.gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gender.Location = new System.Drawing.Point(97, 87);
+            this.gender.Margin = new System.Windows.Forms.Padding(4);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(100, 24);
+            this.gender.Size = new System.Drawing.Size(102, 24);
             this.gender.TabIndex = 1;
             // 
             // BuyTicket
